@@ -25,6 +25,7 @@
 const module_data module_map[] = {
     {MOD_ALL, "ALL"},
     /* add your module name following */
+    {MOD_MY_TRACE, "MY_TRACE"},
     /* add your module name above */
     {MOD_CMA, "CMAGENT"},
     {MOD_CMS, "CMSERVER"},

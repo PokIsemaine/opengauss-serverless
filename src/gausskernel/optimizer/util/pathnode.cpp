@@ -606,6 +606,7 @@ static Path* obtain_cheaper_path(Path* cheapest_path, Path* path, CostSelector c
  */
 void set_cheapest(RelOptInfo* parent_rel, PlannerInfo* root)
 {
+    ereport(DEBUG5, (errmodule(MOD_MY_TRACE), errmsg("set_cheapest"))); 
     Path* cheapest_startup_path = NULL;
     Path* cheapest_total_path = NULL;
     List* cheapest_total_path_list = NIL;
@@ -863,6 +864,7 @@ Path *FindMatchedPath(PlannerInfo* root, RelOptInfo* rel)
  */
 Path* get_cheapest_path(PlannerInfo* root, RelOptInfo* rel, const double* agg_groups, bool has_groupby)
 {
+    ereport(DEBUG5, (errmodule(MOD_MY_TRACE), errmsg("get_cheapest_path"))); 
     Path* matched_path = NULL;
     Path* cheapest_path = (Path*)linitial(rel->cheapest_total_path);
     Path* superset_path = NULL;

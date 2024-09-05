@@ -3130,6 +3130,7 @@ static bool parse_query_dop(int* newval, void** extra, GucSource source)
         u_sess->opt_cxt.parallel_debug_mode = DEBUG_MODE;
         u_sess->opt_cxt.max_query_dop = -1; /* turn off dynamic smp */
     } else if ((dop_mark > 0) && (dop_mark <= MAX_QUERY_DOP)) {
+        // query_dop = 4 走这个分支
         /*
          * This mode is for performance test and release, we enhance the threshold
          * to reject low cost parallel groups, so that the performance will not

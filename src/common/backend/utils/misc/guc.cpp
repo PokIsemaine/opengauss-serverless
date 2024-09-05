@@ -7790,6 +7790,7 @@ int set_config_option(const char* name, const char* value, GucContext context, G
             void* newextra = NULL;
 
             if (value != NULL) {
+                // 解析校验
                 if (!validate_conf_option(record, name, value, source, elevel, false, &newval, &newextra)) {
                     return 0;
                 }
@@ -7822,7 +7823,7 @@ int set_config_option(const char* name, const char* value, GucContext context, G
                     push_old_value(&conf->gen, action);
 
                 u_sess->utils_cxt.guc_new_value = &newval;
-
+                // 设置新值
                 if (conf->assign_hook)
                     (*conf->assign_hook)(newval, newextra);
 

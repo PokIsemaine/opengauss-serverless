@@ -35,6 +35,7 @@ enum ModuleId {
     /* fastpath for all modules on/off */
     MOD_ALL = 0,
     /* add your module id following */
+    MOD_MY_TRACE,
     MOD_CMCTL,
     MOD_CMA,
     MOD_CMS,

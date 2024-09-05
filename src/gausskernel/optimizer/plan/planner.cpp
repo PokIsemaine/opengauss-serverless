@@ -496,6 +496,7 @@ static void checkTsstoreQuery(Query* query)
 
 PlannedStmt* standard_planner(Query* parse, int cursorOptions, ParamListInfo boundParams)
 {
+    ereport(DEBUG5, (errmodule(MOD_MY_TRACE), errmsg("standard_planner"))); 
     PlannedStmt* result = NULL;
     PlannerGlobal* glob = NULL;
     double tuple_fraction;
@@ -1271,6 +1272,7 @@ static inline bool contain_system_column(Node *var_list)
 Plan* subquery_planner(PlannerGlobal* glob, Query* parse, PlannerInfo* parent_root, bool hasRecursion,
     double tuple_fraction, PlannerInfo** subroot, int options, ItstDisKey* diskeys, List* subqueryRestrictInfo)
 {
+    ereport(DEBUG5, (errmodule(MOD_MY_TRACE), errmsg("subquery_planner in"))); 
     int num_old_subplans = list_length(glob->subplans);
     PlannerInfo* root = NULL;
     Plan* plan = NULL;
@@ -2694,6 +2696,7 @@ static bool has_ts_func(List* tlist)
  */
 static Plan* grouping_planner(PlannerInfo* root, double tuple_fraction)
 {
+    ereport(DEBUG5, (errmodule(MOD_MY_TRACE), errmsg("grouping_planner"))); 
     Query* parse = root->parse;
     List* tlist = parse->targetList;
     int64 offset_est = 0;
@@ -6013,90 +6016,98 @@ static void get_optimal_hashed_path(PlannerInfo* root, Path* cheapest_path, bool
     Size hashentrysize, AggStrategy agg_strategy, Path* hashed_p)
 {
     QualCost total_cost;
-    Plan* subplan = makeNode(Plan);
     double best_cost = 0.0;
     Path result_path;
     errno_t rc = EOK;
 
     rc = memset_s(&result_path, sizeof(Path), 0, sizeof(Path));
     securec_check(rc, "\0", "\0");
+    // TODO(zsl)
+    // for(int dop = 1; dop <= 10; dop++) {
+        Plan* subplan = makeNode(Plan);
+        subplan->startup_cost = cheapest_path->startup_cost;
+        subplan->total_cost = cheapest_path->total_cost;
+        subplan->plan_rows = cheapest_path->rows;
+        subplan->multiple = cheapest_path->multiple;
+        subplan->plan_width = path_width;
+        subplan->vec_output = false;
+        subplan->exec_nodes =
+            ng_convert_to_exec_nodes(&cheapest_path->distribution, cheapest_path->locator_type, RELATION_ACCESS_READ);
+        subplan->dop = cheapest_path->dop;
+        // subplan->dop = dop;
+        // ereport(DEBUG5, (errmodule(MOD_MY_TRACE), errmsg("get_optimal_hashed_path dop = %d", dop))); 
 
-    subplan->startup_cost = cheapest_path->startup_cost;
-    subplan->total_cost = cheapest_path->total_cost;
-    subplan->plan_rows = cheapest_path->rows;
-    subplan->multiple = cheapest_path->multiple;
-    subplan->plan_width = path_width;
-    subplan->vec_output = false;
-    subplan->exec_nodes =
-        ng_convert_to_exec_nodes(&cheapest_path->distribution, cheapest_path->locator_type, RELATION_ACCESS_READ);
-    subplan->dop = cheapest_path->dop;
+        total_cost.startup = 0.0;
+        total_cost.per_tuple = 0.0;
 
-    total_cost.startup = 0.0;
-    total_cost.per_tuple = 0.0;
-
-    if (root->query_level == 1) {
-        /* Get total cost for hashagg (dn) + gather + hashagg (cn). */
-        get_hashagg_gather_hashagg_path(root,
-            subplan,
-            agg_costs,
-            numGroupCols,
-            numGroups[0],
-            numGroups[1],
-            total_cost,
-            hashentrysize,
-            agg_strategy,
-            needs_stream,
-            &result_path);
-        if ((best_cost == 0.0) || (result_path.total_cost < best_cost)) {
-            best_cost = result_path.total_cost;
-            copy_path_costsize(hashed_p, &result_path);
-        }
-    }
-
-    if (needs_stream && (distributed_key != NIL)) {
-        /* Get total cost for redistribute(dn) + hashagg (dn). */
-        Distribution* distribution = ng_get_dest_distribution(subplan);
-        get_redist_hashagg_path(root,
-            subplan,
-            agg_costs,
-            numGroupCols,
-            numGroups[0],
-            numGroups[1],
-            distributed_key,
-            multiple,
-            distribution,
-            total_cost,
-            hashentrysize,
-            needs_stream,
-            &result_path);
-        if ((best_cost == 0.0) || (result_path.total_cost < best_cost)) {
-            best_cost = result_path.total_cost;
-            copy_path_costsize(hashed_p, &result_path);
+        if (root->query_level == 1) {
+            /* Get total cost for hashagg (dn) + gather + hashagg (cn). */
+            get_hashagg_gather_hashagg_path(root,
+                subplan,
+                agg_costs,
+                numGroupCols,
+                numGroups[0],
+                numGroups[1],
+                total_cost,
+                hashentrysize,
+                agg_strategy,
+                needs_stream,
+                &result_path);
+            if ((best_cost == 0.0) || (result_path.total_cost < best_cost)) {
+                best_cost = result_path.total_cost;
+                // cheapest_path->dop = dop;
+                copy_path_costsize(hashed_p, &result_path);
+            }
         }
 
-        /* Get total cost for hashagg (dn) + redistribute(dn) + hashagg (dn). */
-        get_hashagg_redist_hashagg_path(root,
-            subplan,
-            agg_costs,
-            numGroupCols,
-            numGroups[0],
-            numGroups[1],
-            distributed_key,
-            multiple,
-            distribution,
-            total_cost,
-            hashentrysize,
-            needs_stream,
-            &result_path);
+        if (needs_stream && (distributed_key != NIL)) {
+            /* Get total cost for redistribute(dn) + hashagg (dn). */
+            Distribution* distribution = ng_get_dest_distribution(subplan);
+            get_redist_hashagg_path(root,
+                subplan,
+                agg_costs,
+                numGroupCols,
+                numGroups[0],
+                numGroups[1],
+                distributed_key,
+                multiple,
+                distribution,
+                total_cost,
+                hashentrysize,
+                needs_stream,
+                &result_path);
+            if ((best_cost == 0.0) || (result_path.total_cost < best_cost)) {
+                best_cost = result_path.total_cost;
+                // cheapest_path->dop = dop;
+                copy_path_costsize(hashed_p, &result_path);
+            }
 
-        /* Save the best cost for hashed path. */
-        if ((best_cost == 0.0) || (result_path.total_cost < best_cost)) {
-            copy_path_costsize(hashed_p, &result_path);
+            /* Get total cost for hashagg (dn) + redistribute(dn) + hashagg (dn). */
+            get_hashagg_redist_hashagg_path(root,
+                subplan,
+                agg_costs,
+                numGroupCols,
+                numGroups[0],
+                numGroups[1],
+                distributed_key,
+                multiple,
+                distribution,
+                total_cost,
+                hashentrysize,
+                needs_stream,
+                &result_path);
+
+            /* Save the best cost for hashed path. */
+            if ((best_cost == 0.0) || (result_path.total_cost < best_cost)) {
+                best_cost = result_path.total_cost;
+                // cheapest_path->dop = dop;
+                copy_path_costsize(hashed_p, &result_path);
+            }
         }
-    }
 
-    pfree_ext(subplan);
-    subplan = NULL;
+        pfree_ext(subplan);
+        subplan = NULL;
+    // }   
 }
 
 /*

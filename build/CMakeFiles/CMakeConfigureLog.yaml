@@ -1,0 +1,1293 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.29/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      The system is: Linux - 3.10.0-1160.71.1.el7.x86_64 - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.29/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /opt/rh/devtoolset-7/root/usr/bin/gcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is GNU, found in:
+        /home/zhy/openGauss-server-5.0.0/build/CMakeFiles/3.29.20240412-gaf1d83c/CompilerIdC/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.29/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /opt/rh/devtoolset-7/root/usr/bin/g++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is GNU, found in:
+        /home/zhy/openGauss-server-5.0.0/build/CMakeFiles/3.29.20240412-gaf1d83c/CompilerIdCXX/a.out
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:71 (try_compile)"
+      - "/usr/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:9 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-v7FxX1"
+      binary: "/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-v7FxX1"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-v7FxX1'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /opt/rh/devtoolset-7/root/usr/bin/gmake -f Makefile cmTC_40c0b/fast
+        /opt/rh/devtoolset-7/root/usr/bin/gmake  -f CMakeFiles/cmTC_40c0b.dir/build.make CMakeFiles/cmTC_40c0b.dir/build
+        gmake[1]: Entering directory '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-v7FxX1'
+        Building C object CMakeFiles/cmTC_40c0b.dir/CMakeCCompilerABI.c.o
+        /opt/rh/devtoolset-7/root/usr/bin/gcc   -v -o CMakeFiles/cmTC_40c0b.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.29/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/opt/rh/devtoolset-7/root/usr/bin/gcc
+        Target: x86_64-redhat-linux
+        Configured with: ../configure --enable-bootstrap --enable-languages=c,c++,fortran,lto --prefix=/opt/rh/devtoolset-7/root/usr --mandir=/opt/rh/devtoolset-7/root/usr/share/man --infodir=/opt/rh/devtoolset-7/root/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-plugin --with-linker-hash-style=gnu --enable-initfini-array --with-default-libstdcxx-abi=gcc4-compatible --with-isl=/builddir/build/BUILD/gcc-7.3.1-20180303/obj-x86_64-redhat-linux/isl-install --enable-libmpx --enable-gnu-indirect-function --with-tune=generic --with-arch_32=i686 --build=x86_64-redhat-linux
+        Thread model: posix
+        gcc version 7.3.1 20180303 (Red Hat 7.3.1-5) (GCC) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_40c0b.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
+         /opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/cc1 -quiet -v /usr/share/cmake-3.29/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_40c0b.dir/CMakeCCompilerABI.c.o -version -o /tmp/cctRnxF6.s
+        GNU C11 (GCC) version 7.3.1 20180303 (Red Hat 7.3.1-5) (x86_64-redhat-linux)
+        	compiled by GNU C version 7.3.1 20180303 (Red Hat 7.3.1-5), GMP version 6.0.0, MPFR version 3.1.1, MPC version 1.0.1, isl version isl-0.16.1-GMP
+        
+        warning: GMP header version 6.0.0 differs from library version 6.1.0.
+        warning: MPFR header version 3.1.1 differs from library version 3.1.4.
+        warning: MPC header version 1.0.1 differs from library version 1.0.3.
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include-fixed"
+        ignoring nonexistent directory "/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../x86_64-redhat-linux/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include
+         /usr/local/include
+         /opt/rh/devtoolset-7/root/usr/include
+         /usr/include
+        End of search list.
+        GNU C11 (GCC) version 7.3.1 20180303 (Red Hat 7.3.1-5) (x86_64-redhat-linux)
+        	compiled by GNU C version 7.3.1 20180303 (Red Hat 7.3.1-5), GMP version 6.0.0, MPFR version 3.1.1, MPC version 1.0.1, isl version isl-0.16.1-GMP
+        
+        warning: GMP header version 6.0.0 differs from library version 6.1.0.
+        warning: MPFR header version 3.1.1 differs from library version 3.1.4.
+        warning: MPC header version 1.0.1 differs from library version 1.0.3.
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        Compiler executable checksum: 9297c6e7ca8f6c9f2474dcdc9331bbe8
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_40c0b.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
+         /opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/as -v --64 -o CMakeFiles/cmTC_40c0b.dir/CMakeCCompilerABI.c.o /tmp/cctRnxF6.s
+        GNU assembler version 2.28 (x86_64-redhat-linux) using BFD version version 2.28-11.el7
+        COMPILER_PATH=/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/
+        LIBRARY_PATH=/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_40c0b.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
+        Linking C executable cmTC_40c0b
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_40c0b.dir/link.txt --verbose=1
+        /opt/rh/devtoolset-7/root/usr/bin/gcc  -v -Wl,-v CMakeFiles/cmTC_40c0b.dir/CMakeCCompilerABI.c.o -o cmTC_40c0b
+        Using built-in specs.
+        COLLECT_GCC=/opt/rh/devtoolset-7/root/usr/bin/gcc
+        COLLECT_LTO_WRAPPER=/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/lto-wrapper
+        Target: x86_64-redhat-linux
+        Configured with: ../configure --enable-bootstrap --enable-languages=c,c++,fortran,lto --prefix=/opt/rh/devtoolset-7/root/usr --mandir=/opt/rh/devtoolset-7/root/usr/share/man --infodir=/opt/rh/devtoolset-7/root/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-plugin --with-linker-hash-style=gnu --enable-initfini-array --with-default-libstdcxx-abi=gcc4-compatible --with-isl=/builddir/build/BUILD/gcc-7.3.1-20180303/obj-x86_64-redhat-linux/isl-install --enable-libmpx --enable-gnu-indirect-function --with-tune=generic --with-arch_32=i686 --build=x86_64-redhat-linux
+        Thread model: posix
+        gcc version 7.3.1 20180303 (Red Hat 7.3.1-5) (GCC) 
+        COMPILER_PATH=/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/
+        LIBRARY_PATH=/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_40c0b' '-mtune=generic' '-march=x86-64'
+         /opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/collect2 -plugin /opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/liblto_plugin.so -plugin-opt=/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccu19t29.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_40c0b /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/crtbegin.o -L/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7 -L/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../.. -v CMakeFiles/cmTC_40c0b.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/crtend.o /lib/../lib64/crtn.o
+        collect2 version 7.3.1 20180303 (Red Hat 7.3.1-5)
+        /opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/ld -plugin /opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/liblto_plugin.so -plugin-opt=/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccu19t29.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_40c0b /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/crtbegin.o -L/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7 -L/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../.. -v CMakeFiles/cmTC_40c0b.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/crtend.o /lib/../lib64/crtn.o
+        GNU ld version 2.28-11.el7
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_40c0b' '-mtune=generic' '-march=x86-64'
+        gmake[1]: Leaving directory '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-v7FxX1'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:144 (message)"
+      - "/usr/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include]
+          add: [/usr/local/include]
+          add: [/opt/rh/devtoolset-7/root/usr/include]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include] ==> [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/opt/rh/devtoolset-7/root/usr/include] ==> [/opt/rh/devtoolset-7/root/usr/include]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include;/usr/local/include;/opt/rh/devtoolset-7/root/usr/include;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:180 (message)"
+      - "/usr/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
+        ignore line: [Change Dir: '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-v7FxX1']
+        ignore line: []
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /opt/rh/devtoolset-7/root/usr/bin/gmake -f Makefile cmTC_40c0b/fast]
+        ignore line: [/opt/rh/devtoolset-7/root/usr/bin/gmake  -f CMakeFiles/cmTC_40c0b.dir/build.make CMakeFiles/cmTC_40c0b.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-v7FxX1']
+        ignore line: [Building C object CMakeFiles/cmTC_40c0b.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/opt/rh/devtoolset-7/root/usr/bin/gcc   -v -o CMakeFiles/cmTC_40c0b.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.29/Modules/CMakeCCompilerABI.c]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/opt/rh/devtoolset-7/root/usr/bin/gcc]
+        ignore line: [Target: x86_64-redhat-linux]
+        ignore line: [Configured with: ../configure --enable-bootstrap --enable-languages=c c++ fortran lto --prefix=/opt/rh/devtoolset-7/root/usr --mandir=/opt/rh/devtoolset-7/root/usr/share/man --infodir=/opt/rh/devtoolset-7/root/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-plugin --with-linker-hash-style=gnu --enable-initfini-array --with-default-libstdcxx-abi=gcc4-compatible --with-isl=/builddir/build/BUILD/gcc-7.3.1-20180303/obj-x86_64-redhat-linux/isl-install --enable-libmpx --enable-gnu-indirect-function --with-tune=generic --with-arch_32=i686 --build=x86_64-redhat-linux]
+        ignore line: [Thread model: posix]
+        ignore line: [gcc version 7.3.1 20180303 (Red Hat 7.3.1-5) (GCC) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_40c0b.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
+        ignore line: [ /opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/cc1 -quiet -v /usr/share/cmake-3.29/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_40c0b.dir/CMakeCCompilerABI.c.o -version -o /tmp/cctRnxF6.s]
+        ignore line: [GNU C11 (GCC) version 7.3.1 20180303 (Red Hat 7.3.1-5) (x86_64-redhat-linux)]
+        ignore line: [	compiled by GNU C version 7.3.1 20180303 (Red Hat 7.3.1-5)  GMP version 6.0.0  MPFR version 3.1.1  MPC version 1.0.1  isl version isl-0.16.1-GMP]
+        ignore line: []
+        ignore line: [warning: GMP header version 6.0.0 differs from library version 6.1.0.]
+        ignore line: [warning: MPFR header version 3.1.1 differs from library version 3.1.4.]
+        ignore line: [warning: MPC header version 1.0.1 differs from library version 1.0.3.]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include-fixed"]
+        ignore line: [ignoring nonexistent directory "/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../x86_64-redhat-linux/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /opt/rh/devtoolset-7/root/usr/include]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [GNU C11 (GCC) version 7.3.1 20180303 (Red Hat 7.3.1-5) (x86_64-redhat-linux)]
+        ignore line: [	compiled by GNU C version 7.3.1 20180303 (Red Hat 7.3.1-5)  GMP version 6.0.0  MPFR version 3.1.1  MPC version 1.0.1  isl version isl-0.16.1-GMP]
+        ignore line: []
+        ignore line: [warning: GMP header version 6.0.0 differs from library version 6.1.0.]
+        ignore line: [warning: MPFR header version 3.1.1 differs from library version 3.1.4.]
+        ignore line: [warning: MPC header version 1.0.1 differs from library version 1.0.3.]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [Compiler executable checksum: 9297c6e7ca8f6c9f2474dcdc9331bbe8]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_40c0b.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
+        ignore line: [ /opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/as -v --64 -o CMakeFiles/cmTC_40c0b.dir/CMakeCCompilerABI.c.o /tmp/cctRnxF6.s]
+        ignore line: [GNU assembler version 2.28 (x86_64-redhat-linux) using BFD version version 2.28-11.el7]
+        ignore line: [COMPILER_PATH=/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/]
+        ignore line: [LIBRARY_PATH=/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_40c0b.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
+        ignore line: [Linking C executable cmTC_40c0b]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_40c0b.dir/link.txt --verbose=1]
+        ignore line: [/opt/rh/devtoolset-7/root/usr/bin/gcc  -v -Wl -v CMakeFiles/cmTC_40c0b.dir/CMakeCCompilerABI.c.o -o cmTC_40c0b]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/opt/rh/devtoolset-7/root/usr/bin/gcc]
+        ignore line: [COLLECT_LTO_WRAPPER=/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/lto-wrapper]
+        ignore line: [Target: x86_64-redhat-linux]
+        ignore line: [Configured with: ../configure --enable-bootstrap --enable-languages=c c++ fortran lto --prefix=/opt/rh/devtoolset-7/root/usr --mandir=/opt/rh/devtoolset-7/root/usr/share/man --infodir=/opt/rh/devtoolset-7/root/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-plugin --with-linker-hash-style=gnu --enable-initfini-array --with-default-libstdcxx-abi=gcc4-compatible --with-isl=/builddir/build/BUILD/gcc-7.3.1-20180303/obj-x86_64-redhat-linux/isl-install --enable-libmpx --enable-gnu-indirect-function --with-tune=generic --with-arch_32=i686 --build=x86_64-redhat-linux]
+        ignore line: [Thread model: posix]
+        ignore line: [gcc version 7.3.1 20180303 (Red Hat 7.3.1-5) (GCC) ]
+        ignore line: [COMPILER_PATH=/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/]
+        ignore line: [LIBRARY_PATH=/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_40c0b' '-mtune=generic' '-march=x86-64']
+        link line: [ /opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/collect2 -plugin /opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/liblto_plugin.so -plugin-opt=/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccu19t29.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_40c0b /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/crtbegin.o -L/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7 -L/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../.. -v CMakeFiles/cmTC_40c0b.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/crtend.o /lib/../lib64/crtn.o]
+          arg [/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccu19t29.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [--build-id] ==> ignore
+          arg [--no-add-needed] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [--hash-style=gnu] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_40c0b] ==> ignore
+          arg [/lib/../lib64/crt1.o] ==> obj [/lib/../lib64/crt1.o]
+          arg [/lib/../lib64/crti.o] ==> obj [/lib/../lib64/crti.o]
+          arg [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/crtbegin.o] ==> obj [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/crtbegin.o]
+          arg [-L/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7] ==> dir [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7]
+          arg [-L/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64] ==> dir [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64]
+          arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+          arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+          arg [-L/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../..] ==> dir [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../..]
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_40c0b.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--no-as-needed] ==> ignore
+          arg [-lc] ==> lib [c]
+          arg [-lgcc] ==> lib [gcc]
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--no-as-needed] ==> ignore
+          arg [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/crtend.o] ==> obj [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/crtend.o]
+          arg [/lib/../lib64/crtn.o] ==> obj [/lib/../lib64/crtn.o]
+        ignore line: [collect2 version 7.3.1 20180303 (Red Hat 7.3.1-5)]
+        ignore line: [/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/ld -plugin /opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/liblto_plugin.so -plugin-opt=/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccu19t29.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_40c0b /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/crtbegin.o -L/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7 -L/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../.. -v CMakeFiles/cmTC_40c0b.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/crtend.o /lib/../lib64/crtn.o]
+        linker tool for 'C': /opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/ld
+        collapse obj [/lib/../lib64/crt1.o] ==> [/lib64/crt1.o]
+        collapse obj [/lib/../lib64/crti.o] ==> [/lib64/crti.o]
+        collapse obj [/lib/../lib64/crtn.o] ==> [/lib64/crtn.o]
+        collapse library dir [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7] ==> [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7]
+        collapse library dir [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64] ==> [/opt/rh/devtoolset-7/root/usr/lib64]
+        collapse library dir [/lib/../lib64] ==> [/lib64]
+        collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+        collapse library dir [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../..] ==> [/opt/rh/devtoolset-7/root/usr/lib]
+        implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+        implicit objs: [/lib64/crt1.o;/lib64/crti.o;/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/crtbegin.o;/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/crtend.o;/lib64/crtn.o]
+        implicit dirs: [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7;/opt/rh/devtoolset-7/root/usr/lib64;/lib64;/usr/lib64;/opt/rh/devtoolset-7/root/usr/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "/usr/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:217 (cmake_determine_linker_id)"
+      - "/usr/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      Running the C compiler's linker: "/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/ld" "-v"
+      GNU ld version 2.28-11.el7
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:71 (try_compile)"
+      - "/usr/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:9 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-UB6Y9D"
+      binary: "/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-UB6Y9D"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-UB6Y9D'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /opt/rh/devtoolset-7/root/usr/bin/gmake -f Makefile cmTC_d9a6e/fast
+        /opt/rh/devtoolset-7/root/usr/bin/gmake  -f CMakeFiles/cmTC_d9a6e.dir/build.make CMakeFiles/cmTC_d9a6e.dir/build
+        gmake[1]: Entering directory '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-UB6Y9D'
+        Building CXX object CMakeFiles/cmTC_d9a6e.dir/CMakeCXXCompilerABI.cpp.o
+        /opt/rh/devtoolset-7/root/usr/bin/g++   -v -o CMakeFiles/cmTC_d9a6e.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp
+        Using built-in specs.
+        COLLECT_GCC=/opt/rh/devtoolset-7/root/usr/bin/g++
+        Target: x86_64-redhat-linux
+        Configured with: ../configure --enable-bootstrap --enable-languages=c,c++,fortran,lto --prefix=/opt/rh/devtoolset-7/root/usr --mandir=/opt/rh/devtoolset-7/root/usr/share/man --infodir=/opt/rh/devtoolset-7/root/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-plugin --with-linker-hash-style=gnu --enable-initfini-array --with-default-libstdcxx-abi=gcc4-compatible --with-isl=/builddir/build/BUILD/gcc-7.3.1-20180303/obj-x86_64-redhat-linux/isl-install --enable-libmpx --enable-gnu-indirect-function --with-tune=generic --with-arch_32=i686 --build=x86_64-redhat-linux
+        Thread model: posix
+        gcc version 7.3.1 20180303 (Red Hat 7.3.1-5) (GCC) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_d9a6e.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+         /opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/cc1plus -quiet -v -D_GNU_SOURCE /usr/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_d9a6e.dir/CMakeCXXCompilerABI.cpp.o -version -o /tmp/ccHxam0k.s
+        GNU C++14 (GCC) version 7.3.1 20180303 (Red Hat 7.3.1-5) (x86_64-redhat-linux)
+        	compiled by GNU C version 7.3.1 20180303 (Red Hat 7.3.1-5), GMP version 6.0.0, MPFR version 3.1.1, MPC version 1.0.1, isl version isl-0.16.1-GMP
+        
+        warning: GMP header version 6.0.0 differs from library version 6.1.0.
+        warning: MPFR header version 3.1.1 differs from library version 3.1.4.
+        warning: MPC header version 1.0.1 differs from library version 1.0.3.
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include-fixed"
+        ignoring nonexistent directory "/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../x86_64-redhat-linux/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7
+         /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7/x86_64-redhat-linux
+         /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7/backward
+         /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include
+         /usr/local/include
+         /opt/rh/devtoolset-7/root/usr/include
+         /usr/include
+        End of search list.
+        GNU C++14 (GCC) version 7.3.1 20180303 (Red Hat 7.3.1-5) (x86_64-redhat-linux)
+        	compiled by GNU C version 7.3.1 20180303 (Red Hat 7.3.1-5), GMP version 6.0.0, MPFR version 3.1.1, MPC version 1.0.1, isl version isl-0.16.1-GMP
+        
+        warning: GMP header version 6.0.0 differs from library version 6.1.0.
+        warning: MPFR header version 3.1.1 differs from library version 3.1.4.
+        warning: MPC header version 1.0.1 differs from library version 1.0.3.
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        Compiler executable checksum: 2f06f4cd9d92155a269283acf1f10eb6
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_d9a6e.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+         /opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/as -v --64 -o CMakeFiles/cmTC_d9a6e.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccHxam0k.s
+        GNU assembler version 2.28 (x86_64-redhat-linux) using BFD version version 2.28-11.el7
+        COMPILER_PATH=/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/
+        LIBRARY_PATH=/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_d9a6e.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+        Linking CXX executable cmTC_d9a6e
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d9a6e.dir/link.txt --verbose=1
+        /opt/rh/devtoolset-7/root/usr/bin/g++  -v -Wl,-v CMakeFiles/cmTC_d9a6e.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_d9a6e
+        Using built-in specs.
+        COLLECT_GCC=/opt/rh/devtoolset-7/root/usr/bin/g++
+        COLLECT_LTO_WRAPPER=/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/lto-wrapper
+        Target: x86_64-redhat-linux
+        Configured with: ../configure --enable-bootstrap --enable-languages=c,c++,fortran,lto --prefix=/opt/rh/devtoolset-7/root/usr --mandir=/opt/rh/devtoolset-7/root/usr/share/man --infodir=/opt/rh/devtoolset-7/root/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-plugin --with-linker-hash-style=gnu --enable-initfini-array --with-default-libstdcxx-abi=gcc4-compatible --with-isl=/builddir/build/BUILD/gcc-7.3.1-20180303/obj-x86_64-redhat-linux/isl-install --enable-libmpx --enable-gnu-indirect-function --with-tune=generic --with-arch_32=i686 --build=x86_64-redhat-linux
+        Thread model: posix
+        gcc version 7.3.1 20180303 (Red Hat 7.3.1-5) (GCC) 
+        COMPILER_PATH=/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/
+        LIBRARY_PATH=/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_d9a6e' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+         /opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/collect2 -plugin /opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/liblto_plugin.so -plugin-opt=/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccq9R8km.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_d9a6e /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/crtbegin.o -L/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7 -L/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../.. -v CMakeFiles/cmTC_d9a6e.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/crtend.o /lib/../lib64/crtn.o
+        collect2 version 7.3.1 20180303 (Red Hat 7.3.1-5)
+        /opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/ld -plugin /opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/liblto_plugin.so -plugin-opt=/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccq9R8km.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_d9a6e /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/crtbegin.o -L/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7 -L/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../.. -v CMakeFiles/cmTC_d9a6e.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/crtend.o /lib/../lib64/crtn.o
+        GNU ld version 2.28-11.el7
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_d9a6e' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+        gmake[1]: Leaving directory '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-UB6Y9D'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:144 (message)"
+      - "/usr/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7]
+          add: [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7/x86_64-redhat-linux]
+          add: [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7/backward]
+          add: [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include]
+          add: [/usr/local/include]
+          add: [/opt/rh/devtoolset-7/root/usr/include]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7] ==> [/opt/rh/devtoolset-7/root/usr/include/c++/7]
+        collapse include dir [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7/x86_64-redhat-linux] ==> [/opt/rh/devtoolset-7/root/usr/include/c++/7/x86_64-redhat-linux]
+        collapse include dir [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7/backward] ==> [/opt/rh/devtoolset-7/root/usr/include/c++/7/backward]
+        collapse include dir [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include] ==> [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/opt/rh/devtoolset-7/root/usr/include] ==> [/opt/rh/devtoolset-7/root/usr/include]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/opt/rh/devtoolset-7/root/usr/include/c++/7;/opt/rh/devtoolset-7/root/usr/include/c++/7/x86_64-redhat-linux;/opt/rh/devtoolset-7/root/usr/include/c++/7/backward;/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include;/usr/local/include;/opt/rh/devtoolset-7/root/usr/include;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:180 (message)"
+      - "/usr/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
+        ignore line: [Change Dir: '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-UB6Y9D']
+        ignore line: []
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /opt/rh/devtoolset-7/root/usr/bin/gmake -f Makefile cmTC_d9a6e/fast]
+        ignore line: [/opt/rh/devtoolset-7/root/usr/bin/gmake  -f CMakeFiles/cmTC_d9a6e.dir/build.make CMakeFiles/cmTC_d9a6e.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-UB6Y9D']
+        ignore line: [Building CXX object CMakeFiles/cmTC_d9a6e.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/opt/rh/devtoolset-7/root/usr/bin/g++   -v -o CMakeFiles/cmTC_d9a6e.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/opt/rh/devtoolset-7/root/usr/bin/g++]
+        ignore line: [Target: x86_64-redhat-linux]
+        ignore line: [Configured with: ../configure --enable-bootstrap --enable-languages=c c++ fortran lto --prefix=/opt/rh/devtoolset-7/root/usr --mandir=/opt/rh/devtoolset-7/root/usr/share/man --infodir=/opt/rh/devtoolset-7/root/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-plugin --with-linker-hash-style=gnu --enable-initfini-array --with-default-libstdcxx-abi=gcc4-compatible --with-isl=/builddir/build/BUILD/gcc-7.3.1-20180303/obj-x86_64-redhat-linux/isl-install --enable-libmpx --enable-gnu-indirect-function --with-tune=generic --with-arch_32=i686 --build=x86_64-redhat-linux]
+        ignore line: [Thread model: posix]
+        ignore line: [gcc version 7.3.1 20180303 (Red Hat 7.3.1-5) (GCC) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_d9a6e.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+        ignore line: [ /opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/cc1plus -quiet -v -D_GNU_SOURCE /usr/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_d9a6e.dir/CMakeCXXCompilerABI.cpp.o -version -o /tmp/ccHxam0k.s]
+        ignore line: [GNU C++14 (GCC) version 7.3.1 20180303 (Red Hat 7.3.1-5) (x86_64-redhat-linux)]
+        ignore line: [	compiled by GNU C version 7.3.1 20180303 (Red Hat 7.3.1-5)  GMP version 6.0.0  MPFR version 3.1.1  MPC version 1.0.1  isl version isl-0.16.1-GMP]
+        ignore line: []
+        ignore line: [warning: GMP header version 6.0.0 differs from library version 6.1.0.]
+        ignore line: [warning: MPFR header version 3.1.1 differs from library version 3.1.4.]
+        ignore line: [warning: MPC header version 1.0.1 differs from library version 1.0.3.]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include-fixed"]
+        ignore line: [ignoring nonexistent directory "/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../x86_64-redhat-linux/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7]
+        ignore line: [ /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7/x86_64-redhat-linux]
+        ignore line: [ /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../include/c++/7/backward]
+        ignore line: [ /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /opt/rh/devtoolset-7/root/usr/include]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [GNU C++14 (GCC) version 7.3.1 20180303 (Red Hat 7.3.1-5) (x86_64-redhat-linux)]
+        ignore line: [	compiled by GNU C version 7.3.1 20180303 (Red Hat 7.3.1-5)  GMP version 6.0.0  MPFR version 3.1.1  MPC version 1.0.1  isl version isl-0.16.1-GMP]
+        ignore line: []
+        ignore line: [warning: GMP header version 6.0.0 differs from library version 6.1.0.]
+        ignore line: [warning: MPFR header version 3.1.1 differs from library version 3.1.4.]
+        ignore line: [warning: MPC header version 1.0.1 differs from library version 1.0.3.]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [Compiler executable checksum: 2f06f4cd9d92155a269283acf1f10eb6]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_d9a6e.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+        ignore line: [ /opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/as -v --64 -o CMakeFiles/cmTC_d9a6e.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccHxam0k.s]
+        ignore line: [GNU assembler version 2.28 (x86_64-redhat-linux) using BFD version version 2.28-11.el7]
+        ignore line: [COMPILER_PATH=/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/]
+        ignore line: [LIBRARY_PATH=/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_d9a6e.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+        ignore line: [Linking CXX executable cmTC_d9a6e]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d9a6e.dir/link.txt --verbose=1]
+        ignore line: [/opt/rh/devtoolset-7/root/usr/bin/g++  -v -Wl -v CMakeFiles/cmTC_d9a6e.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_d9a6e]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/opt/rh/devtoolset-7/root/usr/bin/g++]
+        ignore line: [COLLECT_LTO_WRAPPER=/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/lto-wrapper]
+        ignore line: [Target: x86_64-redhat-linux]
+        ignore line: [Configured with: ../configure --enable-bootstrap --enable-languages=c c++ fortran lto --prefix=/opt/rh/devtoolset-7/root/usr --mandir=/opt/rh/devtoolset-7/root/usr/share/man --infodir=/opt/rh/devtoolset-7/root/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-plugin --with-linker-hash-style=gnu --enable-initfini-array --with-default-libstdcxx-abi=gcc4-compatible --with-isl=/builddir/build/BUILD/gcc-7.3.1-20180303/obj-x86_64-redhat-linux/isl-install --enable-libmpx --enable-gnu-indirect-function --with-tune=generic --with-arch_32=i686 --build=x86_64-redhat-linux]
+        ignore line: [Thread model: posix]
+        ignore line: [gcc version 7.3.1 20180303 (Red Hat 7.3.1-5) (GCC) ]
+        ignore line: [COMPILER_PATH=/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/]
+        ignore line: [LIBRARY_PATH=/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_d9a6e' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+        link line: [ /opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/collect2 -plugin /opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/liblto_plugin.so -plugin-opt=/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccq9R8km.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_d9a6e /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/crtbegin.o -L/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7 -L/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../.. -v CMakeFiles/cmTC_d9a6e.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/crtend.o /lib/../lib64/crtn.o]
+          arg [/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccq9R8km.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [--build-id] ==> ignore
+          arg [--no-add-needed] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [--hash-style=gnu] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_d9a6e] ==> ignore
+          arg [/lib/../lib64/crt1.o] ==> obj [/lib/../lib64/crt1.o]
+          arg [/lib/../lib64/crti.o] ==> obj [/lib/../lib64/crti.o]
+          arg [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/crtbegin.o] ==> obj [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/crtbegin.o]
+          arg [-L/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7] ==> dir [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7]
+          arg [-L/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64] ==> dir [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64]
+          arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+          arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+          arg [-L/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../..] ==> dir [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../..]
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_d9a6e.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [-lstdc++] ==> lib [stdc++]
+          arg [-lm] ==> lib [m]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lc] ==> lib [c]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/crtend.o] ==> obj [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/crtend.o]
+          arg [/lib/../lib64/crtn.o] ==> obj [/lib/../lib64/crtn.o]
+        ignore line: [collect2 version 7.3.1 20180303 (Red Hat 7.3.1-5)]
+        ignore line: [/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/ld -plugin /opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/liblto_plugin.so -plugin-opt=/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccq9R8km.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_d9a6e /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/crtbegin.o -L/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7 -L/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../.. -v CMakeFiles/cmTC_d9a6e.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/crtend.o /lib/../lib64/crtn.o]
+        linker tool for 'CXX': /opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/ld
+        collapse obj [/lib/../lib64/crt1.o] ==> [/lib64/crt1.o]
+        collapse obj [/lib/../lib64/crti.o] ==> [/lib64/crti.o]
+        collapse obj [/lib/../lib64/crtn.o] ==> [/lib64/crtn.o]
+        collapse library dir [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7] ==> [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7]
+        collapse library dir [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../../../lib64] ==> [/opt/rh/devtoolset-7/root/usr/lib64]
+        collapse library dir [/lib/../lib64] ==> [/lib64]
+        collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+        collapse library dir [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/../../..] ==> [/opt/rh/devtoolset-7/root/usr/lib]
+        implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+        implicit objs: [/lib64/crt1.o;/lib64/crti.o;/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/crtbegin.o;/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7/crtend.o;/lib64/crtn.o]
+        implicit dirs: [/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7;/opt/rh/devtoolset-7/root/usr/lib64;/lib64;/usr/lib64;/opt/rh/devtoolset-7/root/usr/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "/usr/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:217 (cmake_determine_linker_id)"
+      - "/usr/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      Running the CXX compiler's linker: "/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/ld" "-v"
+      GNU ld version 2.28-11.el7
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.29/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "/usr/share/cmake-3.29/Modules/CheckTypeSize.cmake:251 (check_include_file)"
+      - "cmake/src/build_function.cmake:223 (CHECK_TYPE_SIZE)"
+      - "cmake/src/build_options.cmake:12 (CHECK_BASIC_TYPE)"
+      - "CMakeLists.txt:81 (include)"
+    checks:
+      - "Looking for sys/types.h"
+    directories:
+      source: "/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-D5HzUg"
+      binary: "/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-D5HzUg"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/zhy/openGauss-server-5.0.0/cmake/src;/home/zhy/openGauss-server-5.0.0/cmake/check;/home/zhy/openGauss-server-5.0.0/cmake/hotpatch;/home/zhy/openGauss-server-5.0.0/contrib"
+      CMAKE_POSITION_INDEPENDENT_CODE: "OFF"
+    buildResult:
+      variable: "HAVE_SYS_TYPES_H"
+      cached: true
+      stdout: |
+        Change Dir: '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-D5HzUg'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /opt/rh/devtoolset-7/root/usr/bin/gmake -f Makefile cmTC_ca8b7/fast
+        /opt/rh/devtoolset-7/root/usr/bin/gmake  -f CMakeFiles/cmTC_ca8b7.dir/build.make CMakeFiles/cmTC_ca8b7.dir/build
+        gmake[1]: Entering directory '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-D5HzUg'
+        Building C object CMakeFiles/cmTC_ca8b7.dir/CheckIncludeFile.c.o
+        /opt/rh/devtoolset-7/root/usr/bin/gcc    -o CMakeFiles/cmTC_ca8b7.dir/CheckIncludeFile.c.o -c /home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-D5HzUg/CheckIncludeFile.c
+        Linking C executable cmTC_ca8b7
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ca8b7.dir/link.txt --verbose=1
+        /opt/rh/devtoolset-7/root/usr/bin/gcc CMakeFiles/cmTC_ca8b7.dir/CheckIncludeFile.c.o -o cmTC_ca8b7
+        gmake[1]: Leaving directory '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-D5HzUg'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.29/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "/usr/share/cmake-3.29/Modules/CheckTypeSize.cmake:252 (check_include_file)"
+      - "cmake/src/build_function.cmake:223 (CHECK_TYPE_SIZE)"
+      - "cmake/src/build_options.cmake:12 (CHECK_BASIC_TYPE)"
+      - "CMakeLists.txt:81 (include)"
+    checks:
+      - "Looking for stdint.h"
+    directories:
+      source: "/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-w3kd2T"
+      binary: "/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-w3kd2T"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/zhy/openGauss-server-5.0.0/cmake/src;/home/zhy/openGauss-server-5.0.0/cmake/check;/home/zhy/openGauss-server-5.0.0/cmake/hotpatch;/home/zhy/openGauss-server-5.0.0/contrib"
+      CMAKE_POSITION_INDEPENDENT_CODE: "OFF"
+    buildResult:
+      variable: "HAVE_STDINT_H"
+      cached: true
+      stdout: |
+        Change Dir: '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-w3kd2T'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /opt/rh/devtoolset-7/root/usr/bin/gmake -f Makefile cmTC_4a121/fast
+        /opt/rh/devtoolset-7/root/usr/bin/gmake  -f CMakeFiles/cmTC_4a121.dir/build.make CMakeFiles/cmTC_4a121.dir/build
+        gmake[1]: Entering directory '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-w3kd2T'
+        Building C object CMakeFiles/cmTC_4a121.dir/CheckIncludeFile.c.o
+        /opt/rh/devtoolset-7/root/usr/bin/gcc    -o CMakeFiles/cmTC_4a121.dir/CheckIncludeFile.c.o -c /home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-w3kd2T/CheckIncludeFile.c
+        Linking C executable cmTC_4a121
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4a121.dir/link.txt --verbose=1
+        /opt/rh/devtoolset-7/root/usr/bin/gcc CMakeFiles/cmTC_4a121.dir/CheckIncludeFile.c.o -o cmTC_4a121
+        gmake[1]: Leaving directory '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-w3kd2T'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.29/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "/usr/share/cmake-3.29/Modules/CheckTypeSize.cmake:253 (check_include_file)"
+      - "cmake/src/build_function.cmake:223 (CHECK_TYPE_SIZE)"
+      - "cmake/src/build_options.cmake:12 (CHECK_BASIC_TYPE)"
+      - "CMakeLists.txt:81 (include)"
+    checks:
+      - "Looking for stddef.h"
+    directories:
+      source: "/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-n8wdtx"
+      binary: "/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-n8wdtx"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/zhy/openGauss-server-5.0.0/cmake/src;/home/zhy/openGauss-server-5.0.0/cmake/check;/home/zhy/openGauss-server-5.0.0/cmake/hotpatch;/home/zhy/openGauss-server-5.0.0/contrib"
+      CMAKE_POSITION_INDEPENDENT_CODE: "OFF"
+    buildResult:
+      variable: "HAVE_STDDEF_H"
+      cached: true
+      stdout: |
+        Change Dir: '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-n8wdtx'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /opt/rh/devtoolset-7/root/usr/bin/gmake -f Makefile cmTC_3d90a/fast
+        /opt/rh/devtoolset-7/root/usr/bin/gmake  -f CMakeFiles/cmTC_3d90a.dir/build.make CMakeFiles/cmTC_3d90a.dir/build
+        gmake[1]: Entering directory '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-n8wdtx'
+        Building C object CMakeFiles/cmTC_3d90a.dir/CheckIncludeFile.c.o
+        /opt/rh/devtoolset-7/root/usr/bin/gcc    -o CMakeFiles/cmTC_3d90a.dir/CheckIncludeFile.c.o -c /home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-n8wdtx/CheckIncludeFile.c
+        Linking C executable cmTC_3d90a
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3d90a.dir/link.txt --verbose=1
+        /opt/rh/devtoolset-7/root/usr/bin/gcc CMakeFiles/cmTC_3d90a.dir/CheckIncludeFile.c.o -o cmTC_3d90a
+        gmake[1]: Leaving directory '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-n8wdtx'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.29/Modules/CheckTypeSize.cmake:147 (try_compile)"
+      - "/usr/share/cmake-3.29/Modules/CheckTypeSize.cmake:272 (__check_type_size_impl)"
+      - "cmake/src/build_function.cmake:223 (CHECK_TYPE_SIZE)"
+      - "cmake/src/build_options.cmake:12 (CHECK_BASIC_TYPE)"
+      - "CMakeLists.txt:81 (include)"
+    checks:
+      - "Check size of double"
+    directories:
+      source: "/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-O6lHeb"
+      binary: "/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-O6lHeb"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/zhy/openGauss-server-5.0.0/cmake/src;/home/zhy/openGauss-server-5.0.0/cmake/check;/home/zhy/openGauss-server-5.0.0/cmake/hotpatch;/home/zhy/openGauss-server-5.0.0/contrib"
+      CMAKE_POSITION_INDEPENDENT_CODE: "OFF"
+    buildResult:
+      variable: "HAVE_ALIGNOF_DOUBLE"
+      cached: true
+      stdout: |
+        Change Dir: '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-O6lHeb'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /opt/rh/devtoolset-7/root/usr/bin/gmake -f Makefile cmTC_1762c/fast
+        /opt/rh/devtoolset-7/root/usr/bin/gmake  -f CMakeFiles/cmTC_1762c.dir/build.make CMakeFiles/cmTC_1762c.dir/build
+        gmake[1]: Entering directory '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-O6lHeb'
+        Building C object CMakeFiles/cmTC_1762c.dir/ALIGNOF_DOUBLE.c.o
+        /opt/rh/devtoolset-7/root/usr/bin/gcc    -o CMakeFiles/cmTC_1762c.dir/ALIGNOF_DOUBLE.c.o -c /home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-O6lHeb/ALIGNOF_DOUBLE.c
+        Linking C executable cmTC_1762c
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1762c.dir/link.txt --verbose=1
+        /opt/rh/devtoolset-7/root/usr/bin/gcc CMakeFiles/cmTC_1762c.dir/ALIGNOF_DOUBLE.c.o -o cmTC_1762c
+        gmake[1]: Leaving directory '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-O6lHeb'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.29/Modules/CheckTypeSize.cmake:147 (try_compile)"
+      - "/usr/share/cmake-3.29/Modules/CheckTypeSize.cmake:272 (__check_type_size_impl)"
+      - "cmake/src/build_function.cmake:224 (CHECK_TYPE_SIZE)"
+      - "cmake/src/build_options.cmake:12 (CHECK_BASIC_TYPE)"
+      - "CMakeLists.txt:81 (include)"
+    checks:
+      - "Check size of int"
+    directories:
+      source: "/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-j9nqkP"
+      binary: "/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-j9nqkP"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/zhy/openGauss-server-5.0.0/cmake/src;/home/zhy/openGauss-server-5.0.0/cmake/check;/home/zhy/openGauss-server-5.0.0/cmake/hotpatch;/home/zhy/openGauss-server-5.0.0/contrib"
+      CMAKE_POSITION_INDEPENDENT_CODE: "OFF"
+    buildResult:
+      variable: "HAVE_ALIGNOF_INT"
+      cached: true
+      stdout: |
+        Change Dir: '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-j9nqkP'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /opt/rh/devtoolset-7/root/usr/bin/gmake -f Makefile cmTC_c8fd7/fast
+        /opt/rh/devtoolset-7/root/usr/bin/gmake  -f CMakeFiles/cmTC_c8fd7.dir/build.make CMakeFiles/cmTC_c8fd7.dir/build
+        gmake[1]: Entering directory '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-j9nqkP'
+        Building C object CMakeFiles/cmTC_c8fd7.dir/ALIGNOF_INT.c.o
+        /opt/rh/devtoolset-7/root/usr/bin/gcc    -o CMakeFiles/cmTC_c8fd7.dir/ALIGNOF_INT.c.o -c /home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-j9nqkP/ALIGNOF_INT.c
+        Linking C executable cmTC_c8fd7
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c8fd7.dir/link.txt --verbose=1
+        /opt/rh/devtoolset-7/root/usr/bin/gcc CMakeFiles/cmTC_c8fd7.dir/ALIGNOF_INT.c.o -o cmTC_c8fd7
+        gmake[1]: Leaving directory '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-j9nqkP'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.29/Modules/CheckTypeSize.cmake:147 (try_compile)"
+      - "/usr/share/cmake-3.29/Modules/CheckTypeSize.cmake:272 (__check_type_size_impl)"
+      - "cmake/src/build_function.cmake:225 (CHECK_TYPE_SIZE)"
+      - "cmake/src/build_options.cmake:12 (CHECK_BASIC_TYPE)"
+      - "CMakeLists.txt:81 (include)"
+    checks:
+      - "Check size of short"
+    directories:
+      source: "/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-i94vKt"
+      binary: "/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-i94vKt"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/zhy/openGauss-server-5.0.0/cmake/src;/home/zhy/openGauss-server-5.0.0/cmake/check;/home/zhy/openGauss-server-5.0.0/cmake/hotpatch;/home/zhy/openGauss-server-5.0.0/contrib"
+      CMAKE_POSITION_INDEPENDENT_CODE: "OFF"
+    buildResult:
+      variable: "HAVE_ALIGNOF_SHORT"
+      cached: true
+      stdout: |
+        Change Dir: '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-i94vKt'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /opt/rh/devtoolset-7/root/usr/bin/gmake -f Makefile cmTC_ff863/fast
+        /opt/rh/devtoolset-7/root/usr/bin/gmake  -f CMakeFiles/cmTC_ff863.dir/build.make CMakeFiles/cmTC_ff863.dir/build
+        gmake[1]: Entering directory '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-i94vKt'
+        Building C object CMakeFiles/cmTC_ff863.dir/ALIGNOF_SHORT.c.o
+        /opt/rh/devtoolset-7/root/usr/bin/gcc    -o CMakeFiles/cmTC_ff863.dir/ALIGNOF_SHORT.c.o -c /home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-i94vKt/ALIGNOF_SHORT.c
+        Linking C executable cmTC_ff863
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ff863.dir/link.txt --verbose=1
+        /opt/rh/devtoolset-7/root/usr/bin/gcc CMakeFiles/cmTC_ff863.dir/ALIGNOF_SHORT.c.o -o cmTC_ff863
+        gmake[1]: Leaving directory '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-i94vKt'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.29/Modules/CheckTypeSize.cmake:147 (try_compile)"
+      - "/usr/share/cmake-3.29/Modules/CheckTypeSize.cmake:272 (__check_type_size_impl)"
+      - "cmake/src/build_function.cmake:226 (CHECK_TYPE_SIZE)"
+      - "cmake/src/build_options.cmake:12 (CHECK_BASIC_TYPE)"
+      - "CMakeLists.txt:81 (include)"
+    checks:
+      - "Check size of long"
+    directories:
+      source: "/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-rgHzu8"
+      binary: "/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-rgHzu8"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/zhy/openGauss-server-5.0.0/cmake/src;/home/zhy/openGauss-server-5.0.0/cmake/check;/home/zhy/openGauss-server-5.0.0/cmake/hotpatch;/home/zhy/openGauss-server-5.0.0/contrib"
+      CMAKE_POSITION_INDEPENDENT_CODE: "OFF"
+    buildResult:
+      variable: "HAVE_ALIGNOF_LONG"
+      cached: true
+      stdout: |
+        Change Dir: '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-rgHzu8'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /opt/rh/devtoolset-7/root/usr/bin/gmake -f Makefile cmTC_aff95/fast
+        /opt/rh/devtoolset-7/root/usr/bin/gmake  -f CMakeFiles/cmTC_aff95.dir/build.make CMakeFiles/cmTC_aff95.dir/build
+        gmake[1]: Entering directory '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-rgHzu8'
+        Building C object CMakeFiles/cmTC_aff95.dir/ALIGNOF_LONG.c.o
+        /opt/rh/devtoolset-7/root/usr/bin/gcc    -o CMakeFiles/cmTC_aff95.dir/ALIGNOF_LONG.c.o -c /home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-rgHzu8/ALIGNOF_LONG.c
+        Linking C executable cmTC_aff95
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aff95.dir/link.txt --verbose=1
+        /opt/rh/devtoolset-7/root/usr/bin/gcc CMakeFiles/cmTC_aff95.dir/ALIGNOF_LONG.c.o -o cmTC_aff95
+        gmake[1]: Leaving directory '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-rgHzu8'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.29/Modules/CheckTypeSize.cmake:147 (try_compile)"
+      - "/usr/share/cmake-3.29/Modules/CheckTypeSize.cmake:272 (__check_type_size_impl)"
+      - "cmake/src/build_function.cmake:227 (CHECK_TYPE_SIZE)"
+      - "cmake/src/build_options.cmake:12 (CHECK_BASIC_TYPE)"
+      - "CMakeLists.txt:81 (include)"
+    checks:
+      - "Check size of long"
+    directories:
+      source: "/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-iYmBzN"
+      binary: "/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-iYmBzN"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/zhy/openGauss-server-5.0.0/cmake/src;/home/zhy/openGauss-server-5.0.0/cmake/check;/home/zhy/openGauss-server-5.0.0/cmake/hotpatch;/home/zhy/openGauss-server-5.0.0/contrib"
+      CMAKE_POSITION_INDEPENDENT_CODE: "OFF"
+    buildResult:
+      variable: "HAVE_SIZEOF_LONG"
+      cached: true
+      stdout: |
+        Change Dir: '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-iYmBzN'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /opt/rh/devtoolset-7/root/usr/bin/gmake -f Makefile cmTC_37c8a/fast
+        /opt/rh/devtoolset-7/root/usr/bin/gmake  -f CMakeFiles/cmTC_37c8a.dir/build.make CMakeFiles/cmTC_37c8a.dir/build
+        gmake[1]: Entering directory '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-iYmBzN'
+        Building C object CMakeFiles/cmTC_37c8a.dir/SIZEOF_LONG.c.o
+        /opt/rh/devtoolset-7/root/usr/bin/gcc    -o CMakeFiles/cmTC_37c8a.dir/SIZEOF_LONG.c.o -c /home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-iYmBzN/SIZEOF_LONG.c
+        Linking C executable cmTC_37c8a
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_37c8a.dir/link.txt --verbose=1
+        /opt/rh/devtoolset-7/root/usr/bin/gcc CMakeFiles/cmTC_37c8a.dir/SIZEOF_LONG.c.o -o cmTC_37c8a
+        gmake[1]: Leaving directory '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-iYmBzN'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.29/Modules/CheckTypeSize.cmake:147 (try_compile)"
+      - "/usr/share/cmake-3.29/Modules/CheckTypeSize.cmake:272 (__check_type_size_impl)"
+      - "cmake/src/build_function.cmake:228 (CHECK_TYPE_SIZE)"
+      - "cmake/src/build_options.cmake:12 (CHECK_BASIC_TYPE)"
+      - "CMakeLists.txt:81 (include)"
+    checks:
+      - "Check size of off_t"
+    directories:
+      source: "/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-dYYMXs"
+      binary: "/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-dYYMXs"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/zhy/openGauss-server-5.0.0/cmake/src;/home/zhy/openGauss-server-5.0.0/cmake/check;/home/zhy/openGauss-server-5.0.0/cmake/hotpatch;/home/zhy/openGauss-server-5.0.0/contrib"
+      CMAKE_POSITION_INDEPENDENT_CODE: "OFF"
+    buildResult:
+      variable: "HAVE_SIZEOF_OFF_T"
+      cached: true
+      stdout: |
+        Change Dir: '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-dYYMXs'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /opt/rh/devtoolset-7/root/usr/bin/gmake -f Makefile cmTC_ace29/fast
+        /opt/rh/devtoolset-7/root/usr/bin/gmake  -f CMakeFiles/cmTC_ace29.dir/build.make CMakeFiles/cmTC_ace29.dir/build
+        gmake[1]: Entering directory '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-dYYMXs'
+        Building C object CMakeFiles/cmTC_ace29.dir/SIZEOF_OFF_T.c.o
+        /opt/rh/devtoolset-7/root/usr/bin/gcc    -o CMakeFiles/cmTC_ace29.dir/SIZEOF_OFF_T.c.o -c /home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-dYYMXs/SIZEOF_OFF_T.c
+        Linking C executable cmTC_ace29
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ace29.dir/link.txt --verbose=1
+        /opt/rh/devtoolset-7/root/usr/bin/gcc CMakeFiles/cmTC_ace29.dir/SIZEOF_OFF_T.c.o -o cmTC_ace29
+        gmake[1]: Leaving directory '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-dYYMXs'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.29/Modules/CheckTypeSize.cmake:147 (try_compile)"
+      - "/usr/share/cmake-3.29/Modules/CheckTypeSize.cmake:272 (__check_type_size_impl)"
+      - "cmake/src/build_function.cmake:229 (CHECK_TYPE_SIZE)"
+      - "cmake/src/build_options.cmake:12 (CHECK_BASIC_TYPE)"
+      - "CMakeLists.txt:81 (include)"
+    checks:
+      - "Check size of size_t"
+    directories:
+      source: "/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-E80lG8"
+      binary: "/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-E80lG8"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/zhy/openGauss-server-5.0.0/cmake/src;/home/zhy/openGauss-server-5.0.0/cmake/check;/home/zhy/openGauss-server-5.0.0/cmake/hotpatch;/home/zhy/openGauss-server-5.0.0/contrib"
+      CMAKE_POSITION_INDEPENDENT_CODE: "OFF"
+    buildResult:
+      variable: "HAVE_SIZEOF_SIZE_T"
+      cached: true
+      stdout: |
+        Change Dir: '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-E80lG8'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /opt/rh/devtoolset-7/root/usr/bin/gmake -f Makefile cmTC_7bc4f/fast
+        /opt/rh/devtoolset-7/root/usr/bin/gmake  -f CMakeFiles/cmTC_7bc4f.dir/build.make CMakeFiles/cmTC_7bc4f.dir/build
+        gmake[1]: Entering directory '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-E80lG8'
+        Building C object CMakeFiles/cmTC_7bc4f.dir/SIZEOF_SIZE_T.c.o
+        /opt/rh/devtoolset-7/root/usr/bin/gcc    -o CMakeFiles/cmTC_7bc4f.dir/SIZEOF_SIZE_T.c.o -c /home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-E80lG8/SIZEOF_SIZE_T.c
+        Linking C executable cmTC_7bc4f
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7bc4f.dir/link.txt --verbose=1
+        /opt/rh/devtoolset-7/root/usr/bin/gcc CMakeFiles/cmTC_7bc4f.dir/SIZEOF_SIZE_T.c.o -o cmTC_7bc4f
+        gmake[1]: Leaving directory '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-E80lG8'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.29/Modules/CheckTypeSize.cmake:147 (try_compile)"
+      - "/usr/share/cmake-3.29/Modules/CheckTypeSize.cmake:272 (__check_type_size_impl)"
+      - "cmake/src/build_function.cmake:230 (CHECK_TYPE_SIZE)"
+      - "cmake/src/build_options.cmake:12 (CHECK_BASIC_TYPE)"
+      - "CMakeLists.txt:81 (include)"
+    checks:
+      - "Check size of int64"
+    directories:
+      source: "/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-LqZwJO"
+      binary: "/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-LqZwJO"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/zhy/openGauss-server-5.0.0/cmake/src;/home/zhy/openGauss-server-5.0.0/cmake/check;/home/zhy/openGauss-server-5.0.0/cmake/hotpatch;/home/zhy/openGauss-server-5.0.0/contrib"
+      CMAKE_POSITION_INDEPENDENT_CODE: "OFF"
+    buildResult:
+      variable: "HAVE_HAVE_INT64"
+      cached: true
+      stdout: |
+        Change Dir: '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-LqZwJO'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /opt/rh/devtoolset-7/root/usr/bin/gmake -f Makefile cmTC_ea4b4/fast
+        /opt/rh/devtoolset-7/root/usr/bin/gmake  -f CMakeFiles/cmTC_ea4b4.dir/build.make CMakeFiles/cmTC_ea4b4.dir/build
+        gmake[1]: Entering directory '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-LqZwJO'
+        Building C object CMakeFiles/cmTC_ea4b4.dir/HAVE_INT64.c.o
+        /opt/rh/devtoolset-7/root/usr/bin/gcc    -o CMakeFiles/cmTC_ea4b4.dir/HAVE_INT64.c.o -c /home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-LqZwJO/HAVE_INT64.c
+        /home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-LqZwJO/HAVE_INT64.c:27:22: error: ‘int64’ undeclared here (not in a function); did you mean ‘int64_t’?
+         #define SIZE (sizeof(int64))
+                              ^
+        /home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-LqZwJO/HAVE_INT64.c:29:12: note: in expansion of macro ‘SIZE’
+           ('0' + ((SIZE / 10000)%10)),
+                    ^~~~
+        gmake[1]: *** [CMakeFiles/cmTC_ea4b4.dir/build.make:78: CMakeFiles/cmTC_ea4b4.dir/HAVE_INT64.c.o] Error 1
+        gmake[1]: Leaving directory '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-LqZwJO'
+        gmake: *** [Makefile:127: cmTC_ea4b4/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.29/Modules/CheckTypeSize.cmake:147 (try_compile)"
+      - "/usr/share/cmake-3.29/Modules/CheckTypeSize.cmake:272 (__check_type_size_impl)"
+      - "cmake/src/build_function.cmake:231 (CHECK_TYPE_SIZE)"
+      - "cmake/src/build_options.cmake:12 (CHECK_BASIC_TYPE)"
+      - "CMakeLists.txt:81 (include)"
+    checks:
+      - "Check size of intptr_t"
+    directories:
+      source: "/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-mR31Wu"
+      binary: "/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-mR31Wu"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/zhy/openGauss-server-5.0.0/cmake/src;/home/zhy/openGauss-server-5.0.0/cmake/check;/home/zhy/openGauss-server-5.0.0/cmake/hotpatch;/home/zhy/openGauss-server-5.0.0/contrib"
+      CMAKE_POSITION_INDEPENDENT_CODE: "OFF"
+    buildResult:
+      variable: "HAVE_HAVE_INTPTR_T"
+      cached: true
+      stdout: |
+        Change Dir: '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-mR31Wu'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /opt/rh/devtoolset-7/root/usr/bin/gmake -f Makefile cmTC_48628/fast
+        /opt/rh/devtoolset-7/root/usr/bin/gmake  -f CMakeFiles/cmTC_48628.dir/build.make CMakeFiles/cmTC_48628.dir/build
+        gmake[1]: Entering directory '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-mR31Wu'
+        Building C object CMakeFiles/cmTC_48628.dir/HAVE_INTPTR_T.c.o
+        /opt/rh/devtoolset-7/root/usr/bin/gcc    -o CMakeFiles/cmTC_48628.dir/HAVE_INTPTR_T.c.o -c /home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-mR31Wu/HAVE_INTPTR_T.c
+        Linking C executable cmTC_48628
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_48628.dir/link.txt --verbose=1
+        /opt/rh/devtoolset-7/root/usr/bin/gcc CMakeFiles/cmTC_48628.dir/HAVE_INTPTR_T.c.o -o cmTC_48628
+        gmake[1]: Leaving directory '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-mR31Wu'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.29/Modules/CheckTypeSize.cmake:147 (try_compile)"
+      - "/usr/share/cmake-3.29/Modules/CheckTypeSize.cmake:272 (__check_type_size_impl)"
+      - "cmake/src/build_function.cmake:232 (CHECK_TYPE_SIZE)"
+      - "cmake/src/build_options.cmake:12 (CHECK_BASIC_TYPE)"
+      - "CMakeLists.txt:81 (include)"
+    checks:
+      - "Check size of int8"
+    directories:
+      source: "/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-z50Jtb"
+      binary: "/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-z50Jtb"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/zhy/openGauss-server-5.0.0/cmake/src;/home/zhy/openGauss-server-5.0.0/cmake/check;/home/zhy/openGauss-server-5.0.0/cmake/hotpatch;/home/zhy/openGauss-server-5.0.0/contrib"
+      CMAKE_POSITION_INDEPENDENT_CODE: "OFF"
+    buildResult:
+      variable: "HAVE_HAVE_INT8"
+      cached: true
+      stdout: |
+        Change Dir: '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-z50Jtb'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /opt/rh/devtoolset-7/root/usr/bin/gmake -f Makefile cmTC_ef712/fast
+        /opt/rh/devtoolset-7/root/usr/bin/gmake  -f CMakeFiles/cmTC_ef712.dir/build.make CMakeFiles/cmTC_ef712.dir/build
+        gmake[1]: Entering directory '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-z50Jtb'
+        Building C object CMakeFiles/cmTC_ef712.dir/HAVE_INT8.c.o
+        /opt/rh/devtoolset-7/root/usr/bin/gcc    -o CMakeFiles/cmTC_ef712.dir/HAVE_INT8.c.o -c /home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-z50Jtb/HAVE_INT8.c
+        /home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-z50Jtb/HAVE_INT8.c:27:22: error: ‘int8’ undeclared here (not in a function); did you mean ‘int’?
+         #define SIZE (sizeof(int8))
+                              ^
+        /home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-z50Jtb/HAVE_INT8.c:29:12: note: in expansion of macro ‘SIZE’
+           ('0' + ((SIZE / 10000)%10)),
+                    ^~~~
+        gmake[1]: *** [CMakeFiles/cmTC_ef712.dir/build.make:78: CMakeFiles/cmTC_ef712.dir/HAVE_INT8.c.o] Error 1
+        gmake[1]: Leaving directory '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-z50Jtb'
+        gmake: *** [Makefile:127: cmTC_ef712/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.29/Modules/CheckTypeSize.cmake:147 (try_compile)"
+      - "/usr/share/cmake-3.29/Modules/CheckTypeSize.cmake:272 (__check_type_size_impl)"
+      - "cmake/src/build_function.cmake:233 (CHECK_TYPE_SIZE)"
+      - "cmake/src/build_options.cmake:12 (CHECK_BASIC_TYPE)"
+      - "CMakeLists.txt:81 (include)"
+    checks:
+      - "Check size of void*"
+    directories:
+      source: "/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-4JVJ9R"
+      binary: "/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-4JVJ9R"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/zhy/openGauss-server-5.0.0/cmake/src;/home/zhy/openGauss-server-5.0.0/cmake/check;/home/zhy/openGauss-server-5.0.0/cmake/hotpatch;/home/zhy/openGauss-server-5.0.0/contrib"
+      CMAKE_POSITION_INDEPENDENT_CODE: "OFF"
+    buildResult:
+      variable: "HAVE_SIZEOF_VOID_P"
+      cached: true
+      stdout: |
+        Change Dir: '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-4JVJ9R'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /opt/rh/devtoolset-7/root/usr/bin/gmake -f Makefile cmTC_ae505/fast
+        /opt/rh/devtoolset-7/root/usr/bin/gmake  -f CMakeFiles/cmTC_ae505.dir/build.make CMakeFiles/cmTC_ae505.dir/build
+        gmake[1]: Entering directory '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-4JVJ9R'
+        Building C object CMakeFiles/cmTC_ae505.dir/SIZEOF_VOID_P.c.o
+        /opt/rh/devtoolset-7/root/usr/bin/gcc    -o CMakeFiles/cmTC_ae505.dir/SIZEOF_VOID_P.c.o -c /home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-4JVJ9R/SIZEOF_VOID_P.c
+        Linking C executable cmTC_ae505
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ae505.dir/link.txt --verbose=1
+        /opt/rh/devtoolset-7/root/usr/bin/gcc CMakeFiles/cmTC_ae505.dir/SIZEOF_VOID_P.c.o -o cmTC_ae505
+        gmake[1]: Leaving directory '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-4JVJ9R'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.29/Modules/CheckTypeSize.cmake:147 (try_compile)"
+      - "/usr/share/cmake-3.29/Modules/CheckTypeSize.cmake:272 (__check_type_size_impl)"
+      - "cmake/src/build_function.cmake:234 (CHECK_TYPE_SIZE)"
+      - "cmake/src/build_options.cmake:12 (CHECK_BASIC_TYPE)"
+      - "CMakeLists.txt:81 (include)"
+    checks:
+      - "Check size of long long int"
+    directories:
+      source: "/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-lmSz9y"
+      binary: "/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-lmSz9y"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/zhy/openGauss-server-5.0.0/cmake/src;/home/zhy/openGauss-server-5.0.0/cmake/check;/home/zhy/openGauss-server-5.0.0/cmake/hotpatch;/home/zhy/openGauss-server-5.0.0/contrib"
+      CMAKE_POSITION_INDEPENDENT_CODE: "OFF"
+    buildResult:
+      variable: "HAVE_HAVE_LONG_LONG_INT"
+      cached: true
+      stdout: |
+        Change Dir: '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-lmSz9y'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /opt/rh/devtoolset-7/root/usr/bin/gmake -f Makefile cmTC_b4eb0/fast
+        /opt/rh/devtoolset-7/root/usr/bin/gmake  -f CMakeFiles/cmTC_b4eb0.dir/build.make CMakeFiles/cmTC_b4eb0.dir/build
+        gmake[1]: Entering directory '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-lmSz9y'
+        Building C object CMakeFiles/cmTC_b4eb0.dir/HAVE_LONG_LONG_INT.c.o
+        /opt/rh/devtoolset-7/root/usr/bin/gcc    -o CMakeFiles/cmTC_b4eb0.dir/HAVE_LONG_LONG_INT.c.o -c /home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-lmSz9y/HAVE_LONG_LONG_INT.c
+        Linking C executable cmTC_b4eb0
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b4eb0.dir/link.txt --verbose=1
+        /opt/rh/devtoolset-7/root/usr/bin/gcc CMakeFiles/cmTC_b4eb0.dir/HAVE_LONG_LONG_INT.c.o -o cmTC_b4eb0
+        gmake[1]: Leaving directory '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-lmSz9y'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.29/Modules/CheckTypeSize.cmake:147 (try_compile)"
+      - "/usr/share/cmake-3.29/Modules/CheckTypeSize.cmake:272 (__check_type_size_impl)"
+      - "cmake/src/build_function.cmake:235 (CHECK_TYPE_SIZE)"
+      - "cmake/src/build_options.cmake:12 (CHECK_BASIC_TYPE)"
+      - "CMakeLists.txt:81 (include)"
+    checks:
+      - "Check size of long int"
+    directories:
+      source: "/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-AaMHtg"
+      binary: "/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-AaMHtg"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/zhy/openGauss-server-5.0.0/cmake/src;/home/zhy/openGauss-server-5.0.0/cmake/check;/home/zhy/openGauss-server-5.0.0/cmake/hotpatch;/home/zhy/openGauss-server-5.0.0/contrib"
+      CMAKE_POSITION_INDEPENDENT_CODE: "OFF"
+    buildResult:
+      variable: "HAVE_HAVE_LONG_INT"
+      cached: true
+      stdout: |
+        Change Dir: '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-AaMHtg'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /opt/rh/devtoolset-7/root/usr/bin/gmake -f Makefile cmTC_4aa1c/fast
+        /opt/rh/devtoolset-7/root/usr/bin/gmake  -f CMakeFiles/cmTC_4aa1c.dir/build.make CMakeFiles/cmTC_4aa1c.dir/build
+        gmake[1]: Entering directory '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-AaMHtg'
+        Building C object CMakeFiles/cmTC_4aa1c.dir/HAVE_LONG_INT.c.o
+        /opt/rh/devtoolset-7/root/usr/bin/gcc    -o CMakeFiles/cmTC_4aa1c.dir/HAVE_LONG_INT.c.o -c /home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-AaMHtg/HAVE_LONG_INT.c
+        Linking C executable cmTC_4aa1c
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4aa1c.dir/link.txt --verbose=1
+        /opt/rh/devtoolset-7/root/usr/bin/gcc CMakeFiles/cmTC_4aa1c.dir/HAVE_LONG_INT.c.o -o cmTC_4aa1c
+        gmake[1]: Leaving directory '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-AaMHtg'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.29/Modules/CheckTypeSize.cmake:147 (try_compile)"
+      - "/usr/share/cmake-3.29/Modules/CheckTypeSize.cmake:272 (__check_type_size_impl)"
+      - "cmake/src/build_function.cmake:237 (CHECK_TYPE_SIZE)"
+      - "cmake/src/build_options.cmake:12 (CHECK_BASIC_TYPE)"
+      - "CMakeLists.txt:81 (include)"
+    checks:
+      - "Check size of long int"
+    directories:
+      source: "/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-d2IFdY"
+      binary: "/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-d2IFdY"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/zhy/openGauss-server-5.0.0/cmake/src;/home/zhy/openGauss-server-5.0.0/cmake/check;/home/zhy/openGauss-server-5.0.0/cmake/hotpatch;/home/zhy/openGauss-server-5.0.0/contrib"
+      CMAKE_POSITION_INDEPENDENT_CODE: "OFF"
+    buildResult:
+      variable: "HAVE_HAVE_LONG_INT_64"
+      cached: true
+      stdout: |
+        Change Dir: '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-d2IFdY'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /opt/rh/devtoolset-7/root/usr/bin/gmake -f Makefile cmTC_1f57c/fast
+        /opt/rh/devtoolset-7/root/usr/bin/gmake  -f CMakeFiles/cmTC_1f57c.dir/build.make CMakeFiles/cmTC_1f57c.dir/build
+        gmake[1]: Entering directory '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-d2IFdY'
+        Building C object CMakeFiles/cmTC_1f57c.dir/HAVE_LONG_INT_64.c.o
+        /opt/rh/devtoolset-7/root/usr/bin/gcc    -o CMakeFiles/cmTC_1f57c.dir/HAVE_LONG_INT_64.c.o -c /home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-d2IFdY/HAVE_LONG_INT_64.c
+        Linking C executable cmTC_1f57c
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1f57c.dir/link.txt --verbose=1
+        /opt/rh/devtoolset-7/root/usr/bin/gcc CMakeFiles/cmTC_1f57c.dir/HAVE_LONG_INT_64.c.o -o cmTC_1f57c
+        gmake[1]: Leaving directory '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-d2IFdY'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.29/Modules/CheckTypeSize.cmake:147 (try_compile)"
+      - "/usr/share/cmake-3.29/Modules/CheckTypeSize.cmake:272 (__check_type_size_impl)"
+      - "cmake/src/build_function.cmake:248 (CHECK_TYPE_SIZE)"
+      - "cmake/src/build_options.cmake:12 (CHECK_BASIC_TYPE)"
+      - "CMakeLists.txt:81 (include)"
+    checks:
+      - "Check size of uint64"
+    directories:
+      source: "/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-ITc0iG"
+      binary: "/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-ITc0iG"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/zhy/openGauss-server-5.0.0/cmake/src;/home/zhy/openGauss-server-5.0.0/cmake/check;/home/zhy/openGauss-server-5.0.0/cmake/hotpatch;/home/zhy/openGauss-server-5.0.0/contrib"
+      CMAKE_POSITION_INDEPENDENT_CODE: "OFF"
+    buildResult:
+      variable: "HAVE_HAVE_UINT64"
+      cached: true
+      stdout: |
+        Change Dir: '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-ITc0iG'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /opt/rh/devtoolset-7/root/usr/bin/gmake -f Makefile cmTC_8bbf9/fast
+        /opt/rh/devtoolset-7/root/usr/bin/gmake  -f CMakeFiles/cmTC_8bbf9.dir/build.make CMakeFiles/cmTC_8bbf9.dir/build
+        gmake[1]: Entering directory '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-ITc0iG'
+        Building C object CMakeFiles/cmTC_8bbf9.dir/HAVE_UINT64.c.o
+        /opt/rh/devtoolset-7/root/usr/bin/gcc    -o CMakeFiles/cmTC_8bbf9.dir/HAVE_UINT64.c.o -c /home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-ITc0iG/HAVE_UINT64.c
+        /home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-ITc0iG/HAVE_UINT64.c:27:22: error: ‘uint64’ undeclared here (not in a function); did you mean ‘uint64_t’?
+         #define SIZE (sizeof(uint64))
+                              ^
+        /home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-ITc0iG/HAVE_UINT64.c:29:12: note: in expansion of macro ‘SIZE’
+           ('0' + ((SIZE / 10000)%10)),
+                    ^~~~
+        gmake[1]: *** [CMakeFiles/cmTC_8bbf9.dir/build.make:78: CMakeFiles/cmTC_8bbf9.dir/HAVE_UINT64.c.o] Error 1
+        gmake[1]: Leaving directory '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-ITc0iG'
+        gmake: *** [Makefile:127: cmTC_8bbf9/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.29/Modules/CheckTypeSize.cmake:147 (try_compile)"
+      - "/usr/share/cmake-3.29/Modules/CheckTypeSize.cmake:272 (__check_type_size_impl)"
+      - "cmake/src/build_function.cmake:249 (CHECK_TYPE_SIZE)"
+      - "cmake/src/build_options.cmake:12 (CHECK_BASIC_TYPE)"
+      - "CMakeLists.txt:81 (include)"
+    checks:
+      - "Check size of uintptr_t"
+    directories:
+      source: "/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-DIKIzo"
+      binary: "/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-DIKIzo"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/zhy/openGauss-server-5.0.0/cmake/src;/home/zhy/openGauss-server-5.0.0/cmake/check;/home/zhy/openGauss-server-5.0.0/cmake/hotpatch;/home/zhy/openGauss-server-5.0.0/contrib"
+      CMAKE_POSITION_INDEPENDENT_CODE: "OFF"
+    buildResult:
+      variable: "HAVE_HAVE_UINTPTR_T"
+      cached: true
+      stdout: |
+        Change Dir: '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-DIKIzo'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /opt/rh/devtoolset-7/root/usr/bin/gmake -f Makefile cmTC_95057/fast
+        /opt/rh/devtoolset-7/root/usr/bin/gmake  -f CMakeFiles/cmTC_95057.dir/build.make CMakeFiles/cmTC_95057.dir/build
+        gmake[1]: Entering directory '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-DIKIzo'
+        Building C object CMakeFiles/cmTC_95057.dir/HAVE_UINTPTR_T.c.o
+        /opt/rh/devtoolset-7/root/usr/bin/gcc    -o CMakeFiles/cmTC_95057.dir/HAVE_UINTPTR_T.c.o -c /home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-DIKIzo/HAVE_UINTPTR_T.c
+        Linking C executable cmTC_95057
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_95057.dir/link.txt --verbose=1
+        /opt/rh/devtoolset-7/root/usr/bin/gcc CMakeFiles/cmTC_95057.dir/HAVE_UINTPTR_T.c.o -o cmTC_95057
+        gmake[1]: Leaving directory '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-DIKIzo'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.29/Modules/CheckTypeSize.cmake:147 (try_compile)"
+      - "/usr/share/cmake-3.29/Modules/CheckTypeSize.cmake:272 (__check_type_size_impl)"
+      - "cmake/src/build_function.cmake:250 (CHECK_TYPE_SIZE)"
+      - "cmake/src/build_options.cmake:12 (CHECK_BASIC_TYPE)"
+      - "CMakeLists.txt:81 (include)"
+    checks:
+      - "Check size of uint8"
+    directories:
+      source: "/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-SYdHa7"
+      binary: "/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-SYdHa7"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/zhy/openGauss-server-5.0.0/cmake/src;/home/zhy/openGauss-server-5.0.0/cmake/check;/home/zhy/openGauss-server-5.0.0/cmake/hotpatch;/home/zhy/openGauss-server-5.0.0/contrib"
+      CMAKE_POSITION_INDEPENDENT_CODE: "OFF"
+    buildResult:
+      variable: "HAVE_HAVE_UINT8"
+      cached: true
+      stdout: |
+        Change Dir: '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-SYdHa7'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /opt/rh/devtoolset-7/root/usr/bin/gmake -f Makefile cmTC_d2cfb/fast
+        /opt/rh/devtoolset-7/root/usr/bin/gmake  -f CMakeFiles/cmTC_d2cfb.dir/build.make CMakeFiles/cmTC_d2cfb.dir/build
+        gmake[1]: Entering directory '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-SYdHa7'
+        Building C object CMakeFiles/cmTC_d2cfb.dir/HAVE_UINT8.c.o
+        /opt/rh/devtoolset-7/root/usr/bin/gcc    -o CMakeFiles/cmTC_d2cfb.dir/HAVE_UINT8.c.o -c /home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-SYdHa7/HAVE_UINT8.c
+        /home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-SYdHa7/HAVE_UINT8.c:27:22: error: ‘uint8’ undeclared here (not in a function); did you mean ‘uint’?
+         #define SIZE (sizeof(uint8))
+                              ^
+        /home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-SYdHa7/HAVE_UINT8.c:29:12: note: in expansion of macro ‘SIZE’
+           ('0' + ((SIZE / 10000)%10)),
+                    ^~~~
+        gmake[1]: *** [CMakeFiles/cmTC_d2cfb.dir/build.make:78: CMakeFiles/cmTC_d2cfb.dir/HAVE_UINT8.c.o] Error 1
+        gmake[1]: Leaving directory '/home/zhy/openGauss-server-5.0.0/build/CMakeFiles/CMakeScratch/TryCompile-SYdHa7'
+        gmake: *** [Makefile:127: cmTC_d2cfb/fast] Error 2
+        
+      exitCode: 2
+...

@@ -150,6 +150,7 @@ enum ModuleId {
     MOD_PARTITION,
     MOD_SRF, /* debug info for SRF */
 
+    MOD_MY_TRACE, // 自己拿来跟踪的 
     /*
      * Add your module id above.
      * Do not forget to fill up module_map[] about module name, and keep their ordering;

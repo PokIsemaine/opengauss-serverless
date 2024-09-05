@@ -2802,7 +2802,7 @@ static void exec_simple_query(const char* query_string, MessageType messageType,
 
         plantree_list = pg_plan_queries(querytree_list, 0, NULL);
         
-        system("gs_cgroup -u -S class1 -g 30 --fixed");
+        //system("gs_cgroup -u -S class1 -g 30 --fixed");
 
         /* sqladvisor collect query */
         collectSimpleQuery(query_string, isCollect);
