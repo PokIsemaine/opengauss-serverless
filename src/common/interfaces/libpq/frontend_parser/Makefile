@@ -65,7 +65,7 @@ removefiles:
 	rm -f fe-*.cpp
 all:softlinks scan.o gram.o ${OBJS} all-static-lib
 
-clean: clean-lib submake-kwlist-clean
+clean: clean-lib
 	rm -f gram.cpp gram.hpp scan.cpp
 	rm -f *.o *.a
 	rm -f test
