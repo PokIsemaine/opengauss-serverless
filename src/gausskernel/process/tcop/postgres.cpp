@@ -417,7 +417,7 @@ static int InteractiveBackend(StringInfo inBuf)
     printf("backend> ");
     fflush(stdout);
 
-    resetStringInfo(inBuf);
+    resetString Info(inBuf);
 
     if (t_thrd.postgres_cxt.UseNewLine) {
         /*

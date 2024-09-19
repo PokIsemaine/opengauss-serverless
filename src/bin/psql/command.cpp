@@ -61,6 +61,7 @@
 
 /* Database Security: Data importing/dumping support AES128. */
 #include <time.h>
+#include <iostream>
 #include "pgtime.h"
 
 #ifdef ENABLE_UT

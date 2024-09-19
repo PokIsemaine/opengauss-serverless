@@ -44,7 +44,7 @@ $(top_builddir)/src/common/interfaces/libpq/client_logic_processor/stmt_processo
 
 describe.o:  $(top_builddir)/src/common/interfaces/libpq/client_logic_processor/stmt_processor.o
 
-CFLAGS += -Wl,-z,relro,-z,now -I$(CJSON_INCLUDE_PATH) -I$(LIBCURL_INCLUDE_PATH)
+CFLAGS += -g -Wl,-z,relro,-z,now -I$(CJSON_INCLUDE_PATH) -I$(LIBCURL_INCLUDE_PATH)
 LDFLAGS += -L$(CJSON_LIB_PATH) -L$(LIBCURL_LIB_PATH) -L$(LIBEDIT_LIB_PATH)
 LIBS += -ledit -lcjson -lcurl
 ifeq ($(enable_lite_mode), no)

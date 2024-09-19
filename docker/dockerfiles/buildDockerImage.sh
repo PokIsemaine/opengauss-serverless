@@ -65,7 +65,7 @@ fi
 check_docker_version() {
   # Get Docker Server version
   echo "Checking Docker version."
-  DOCKER_VERSION=$(docker version --format '{{.Server.Version | printf "%.5s" }}'|| exit 0)
+  DOCKER_VERSION=$(docker version --format '{{.Server.Version | printf "%.6s" }}'|| exit 0)
   # Remove dot in Docker version
   DOCKER_VERSION=${DOCKER_VERSION//./}
 

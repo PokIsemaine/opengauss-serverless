@@ -1175,7 +1175,6 @@ bool SendQuery(const char* query, bool is_print, bool print_error)
     }
 
     SetCancelConn();
-
     transaction_status = PQtransactionStatus(pset.db);
 
     if (transaction_status == PQTRANS_IDLE && !pset.autocommit && !command_no_begin(query)) {

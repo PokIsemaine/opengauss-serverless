@@ -15,7 +15,6 @@
 
 #include "mb/pg_wchar.h"
 #include <cxxabi.h>
-
 #ifdef ENABLE_UT
 #define static
 #endif
@@ -301,7 +300,7 @@ int MainLoop(FILE* source, char* querystring)
     char* line = NULL;                 /* current line of input */
     size_t added_nl_pos;
     bool success = false;
-    bool line_saved_in_history = false;
+    bool line_saved_in_history = false;;
     volatile int successResult = EXIT_SUCCESS;
     volatile backslashResult slashCmdStatus = PSQL_CMD_UNKNOWN;
     volatile promptStatus_t prompt_status = PROMPT_READY;
@@ -427,6 +426,7 @@ int MainLoop(FILE* source, char* querystring)
                     setbuffer(source, file_buffer, sizeof(file_buffer) - 1);
                 }
                 line = gets_fromFile(source);
+                //std::cout<<line << std::endl;
             } else {
                 /* only assign line the first time in querystring situation. */
                 if (source_flag) {
@@ -501,7 +501,6 @@ int MainLoop(FILE* source, char* querystring)
         if (pset.echo == PSQL_ECHO_ALL && !pset.cur_cmd_interactive)
             puts(line);
         (void)fflush(stdout);
-
         /* insert newlines into query buffer between source lines */
         if (query_buf->len > 0) {
             appendPQExpBufferChar(query_buf, '\n');
@@ -544,6 +543,7 @@ int MainLoop(FILE* source, char* querystring)
              * single-line mode.
              */
             if (scan_result == PSCAN_SEMICOLON || (scan_result == PSCAN_EOL && pset.singleline)) {
+                                                
                 /*
                  * Save query in history.  We use history_buf to accumulate
                  * multi-line queries into a single history entry.
@@ -553,7 +553,6 @@ int MainLoop(FILE* source, char* querystring)
                     pg_send_history(history_buf);
                     line_saved_in_history = true;
                 }
-
                 /* execute query */
                 if (!pset.parallel && !query_count) {
 #if defined(USE_ASSERT_CHECKING) || defined(FASTCHECK)
@@ -750,7 +749,6 @@ int MainLoop(FILE* source, char* querystring)
                 break;
             }
         }
-
         /* Add line to pending history if we didn't execute anything yet */
         if (pset.cur_cmd_interactive && !line_saved_in_history) {
             pg_append_history(line, history_buf);

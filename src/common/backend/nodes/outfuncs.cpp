@@ -1752,7 +1752,6 @@ static void _outAgg(StringInfo str, Agg* node)
         WRITE_GRPOP_FIELD(grp_collations, numCols);
     }
 #endif
-
     WRITE_LONG_FIELD(numGroups);
     WRITE_NODE_FIELD(groupingSets);
     WRITE_NODE_FIELD(chain);
