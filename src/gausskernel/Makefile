@@ -104,7 +104,7 @@ ifneq ($(enable_lite_mode), yes)
 endif
 
 # We put libpgport into OBJS, so remove it from LIBS; also add libldap
-LIBS := $(filter-out -lpgport, $(LIBS)) $(LDAP_LIBS_BE)
+LIBS := $(filter-out -lpgport, $(LIBS)) $(LDAP_LIBS_BE) 
 
 # the link options for llvm
 LLVM_ZLIB_NAME=z
@@ -121,6 +121,7 @@ endif
 # libobs component
 ###############################################################################
 LIBS += -L$(LIBCURL_LIB_PATH) -L$(LIBOPENSSL_LIB_PATH) 
+#LIBS += -I/usr/local/protobuf/include/google/protobuf/ -L/usr/local/protobuf/lib/ -lprotobuf
 ifeq ($(enable_lite_mode), no)
 LIBS += -leSDKOBS -leSDKLogAPI -lssl -lcrypto -lpcre -liconv -lnghttp2 -llog4cpp -l$(SECURE_C_CHECK)  -lcurl
 else
@@ -277,7 +278,7 @@ LDFLAGS += -L$(LIBOBS_LIB_PATH) \
 endif
  
   # append lz4 for compression: lz4
-  LDFLAGS += -L$(LZ4_LIB_PATH)
+  LDFLAGS += -L$(LZ4_LIB_PATH) 
   CXXFLAGS+= -I$(LZ4_INCLUDE_PATH)
 
   # append cjson for json parser in c: cjson
@@ -287,7 +288,7 @@ endif
   CXXFLAGS+= -I$(LIBOBS_INCLUDE_PATH) 
 
 ifeq ($(enable_multiple_nodes), yes)
-  LDFLAGS += -L$(top_builddir)/../distribute/gtm/libpg
+  LDFLAGS += -L$(top_builddir)/../distribute/gtm/libpg 
 endif
 
 ifneq (, $(findstring __USE_NUMA, $(CFLAGS)))

@@ -13,11 +13,13 @@
  *
  * -------------------------------------------------------------------------
  */
+// #include "../plan_proto/SerializePlan.h"
 #include "postgres.h"
 #include "knl/knl_variable.h"
 
 #include <limits.h>
 #include <math.h>
+
 
 #include "access/transam.h"
 #include "catalog/indexing.h"
@@ -90,6 +92,7 @@
 #include "optimizer/gplanmgr.h"
 #include "instruments/instr_statement.h"
 #include "catalog/gs_collation.h"
+
 
 #ifndef MIN
 #define MIN(A, B) ((B) < (A) ? (B) : (A))
@@ -880,6 +883,13 @@ PlannedStmt* standard_planner(Query* parse, int cursorOptions, ParamListInfo bou
 
     /* build the PlannedStmt result */
     result = makeNode(PlannedStmt);
+
+    // proto_plan::Plan proto_plan;
+    // assign_plan_from_cpp(top_plan, &proto_plan);
+    // std::string serialized_data;
+    // proto_plan.SerializeToString(&serialized_data);
+    // std::cout << "Serialized Plan: " << serialized_data << std::endl;
+
 
     result->commandType = parse->commandType;
     result->queryId = parse->queryId;

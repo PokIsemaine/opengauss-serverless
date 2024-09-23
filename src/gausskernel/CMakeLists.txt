@@ -25,7 +25,6 @@ add_subdirectory(process)
 add_subdirectory(runtime)
 add_subdirectory(security)
 add_subdirectory(ddes)
-
 # gaussdb
 SET(llvm_libs_var "")
 if(${ENABLE_LLVM_COMPILE})

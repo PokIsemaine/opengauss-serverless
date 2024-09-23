@@ -803,7 +803,7 @@ DLLTOOL = @DLLTOOL@
 DLLWRAP = @DLLWRAP@
 LIBS = @LIBS@
 # append linking lib for OPENSSL
-LIBS += -lssl -lcrypto # append linking lib from Huawei_Secure_C
+LIBS += -lssl -lcrypto # append linking lib from Huawei_Secure_C -lprotobuf
 LIBS += -l$(SECURE_C_CHECK)
 # append linking lib for threading
 ifeq ($(enable_debug), no)
