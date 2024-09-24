@@ -5,6 +5,7 @@
  *
  * src/bin/psql/common.c
  */
+#include <iostream>
 #include "settings.h"
 #include "postgres_fe.h"
 #include "common.h"
@@ -1131,6 +1132,7 @@ bool GetPrintResult(PGresult** results, bool is_explain, bool is_print, const ch
  */
 bool SendQuery(const char* query, bool is_print, bool print_error)
 {
+    printf("start sendquery\n");
     PGresult* results = NULL;
     PGTransactionStatusType transaction_status;
     double elapsed_msec = 0;
@@ -1214,14 +1216,20 @@ bool SendQuery(const char* query, bool is_print, bool print_error)
         /* Default fetch-it-all-and-print mode */
         instr_time before, after;
         bool is_explain = false;
-
         if (pset.timing && is_print)
             INSTR_TIME_SET_CURRENT(before);
 
         is_explain = is_explain_command(query);
 
-        if (!is_explain)
-            results = PQexec(pset.db, query);
+        if (!is_explain){
+            if(query[0]=='('){
+                results = PQexecWithPlan(pset.db, query, true);
+            }
+            else{
+                results = PQexec(pset.db, query);
+            }
+        }
+
         else if (!PQsendQuery(pset.db, query))
             results = NULL;
 

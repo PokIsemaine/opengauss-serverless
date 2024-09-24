@@ -21,7 +21,8 @@
 #include "postgres.h"
 #include "knl/knl_variable.h"
 #include "catalog/pg_user_status.h"
-
+#include <iostream>
+#include <fstream>
 #include <fcntl.h>
 #include <limits.h>
 
@@ -7703,8 +7704,23 @@ void LoadSqlPlugin()
  * username is the openGauss user name to be used for the session.
  * ----------------------------------------------------------------
  */
+
+#define LOG_FILE "/home/zhy/opengauss/GaussData/postgres_main_log.txt"
+// 记录日志的函数
+void write_log(const std::string& message) {
+    // 以追加模式打开文件
+    std::ofstream log_file(LOG_FILE, std::ios_base::app);
+    if(!log_file.is_open()) {
+        std::cerr << "无法打开日志文件: " << LOG_FILE << std::endl;
+        return;
+    }
+    // 写入时间戳和日志信息
+    log_file << message << std::endl;
+}
+
 int PostgresMain(int argc, char* argv[], const char* dbname, const char* username)
 {
+    write_log("PostgresMain: 开始");
     int firstchar;
     StringInfoData input_message = {NULL, 0, 0, 0};
     sigjmp_buf local_sigjmp_buf;
@@ -8986,7 +9002,9 @@ int PostgresMain(int argc, char* argv[], const char* dbname, const char* usernam
                 send_ready_for_query = true;
             } break;
 #endif
-
+            case 'Z':
+            printf("plan!\n");
+            break;
             case 'u': /* Autonomous transaction */
             {
                 u_sess->is_autonomous_session = true; 
@@ -9049,7 +9067,6 @@ int PostgresMain(int argc, char* argv[], const char* dbname, const char* usernam
             case 'Q': /* simple query */
             {
                 const char* query_string = NULL;
-
                 pgstat_report_trace_id(&u_sess->trace_cxt, true);
                 query_string = pq_getmsgstring(&input_message);
                 if (query_string == NULL) {

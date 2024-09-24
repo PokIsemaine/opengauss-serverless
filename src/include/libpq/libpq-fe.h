@@ -398,6 +398,7 @@ extern pgthreadlock_t PQregisterThreadLock(pgthreadlock_t newhandler);
 
 /* Simple synchronous query */
 extern PGresult* PQexec(PGconn* conn, const char* query);
+extern PGresult* PQexecWithPlan(PGconn* conn, const char* query, bool is_plan);
 extern PGresult* PQexecParams(PGconn* conn, const char* command, int nParams, const Oid* paramTypes,
     const char* const* paramValues, const int* paramLengths, const int* paramFormats, int resultFormat);
 extern PGresult* PQexecParamsBatch(PGconn* conn, const char* command, int nParams, int nBatch, const Oid* paramTypes,
@@ -411,6 +412,7 @@ extern PGresult* PQexecPreparedBatch(PGconn* conn, const char* stmtName, int nPa
 
 /* Interface for multiple-result or asynchronous queries */
 extern int PQsendQuery(PGconn* conn, const char* query);
+extern int PQsendQueryWithPlan(PGconn* conn, const char* query, bool is_plan);
 extern int PqSendQueryCheckConnValid(Oid nod_oid, PGconn* conn, const char* query);
 extern int PQsendQueryPoolerStatelessReuse(PGconn* conn, const char* query);
 extern int PQsendQueryParams(PGconn* conn, const char* command, int nParams, const Oid* paramTypes,
