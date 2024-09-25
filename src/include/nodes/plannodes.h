@@ -152,7 +152,7 @@ typedef struct PlannedStmt {
 
     int    bucketCnt[MAX_SPECIAL_BUCKETMAP_NUM]; /* the map bucket count */
 
-    char* query_string; /* convey the query string to backend/stream thread of DataNode for debug purpose */
+    const char* query_string; /* convey the query string to backend/stream thread of DataNode for debug purpose */
 
     List* subplan_ids; /* in which plan id subplan should be inited */
 

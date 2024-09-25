@@ -2092,6 +2092,7 @@ typedef struct Query {
     List* withCheckOptions; /* a list of WithCheckOption's */
     List* indexhintList;   /* a list of b mode index hint members */
     bool has_uservar;
+    const char* query_string;
 } Query;
 
 /* ----------------------

@@ -191,7 +191,6 @@ static NodeTag nodeTokenType(char* token, int length)
     NodeTag retval;
     char* numptr = NULL;
     int numlen;
-
     /*
      * Check if the token is a number
      */

@@ -1116,6 +1116,22 @@ bool GetPrintResult(PGresult** results, bool is_explain, bool is_print, const ch
     return OK && return_value;
 }
 
+const char* removeNewlinesSpaces(const char* input) {
+    // 创建一个新的字符数组，长度为输入字符串长度
+    size_t length = strlen(input);
+    char* result = new char[length + 1]; // +1 for null terminator
+    size_t j = 0;
+
+    for (size_t i = 0; i < length; ++i) {
+        // 复制非换行、非空格和非反斜杠字符
+        if (input[i] != '\n' && input[i] != '\r' && input[i] != '\\') {
+            result[j++] = input[i];
+        }
+    }
+    result[j] = '\0'; // 添加字符串结束符
+    return result;
+}
+
 /*
  * SendQuery: send the query string to the backend
  * (and print out results)
@@ -1132,7 +1148,6 @@ bool GetPrintResult(PGresult** results, bool is_explain, bool is_print, const ch
  */
 bool SendQuery(const char* query, bool is_print, bool print_error)
 {
-    printf("start sendquery\n");
     PGresult* results = NULL;
     PGTransactionStatusType transaction_status;
     double elapsed_msec = 0;
