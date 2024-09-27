@@ -2801,7 +2801,9 @@ static void exec_simple_query(const char *query_string, MessageType messageType,
                 print(plantree_list);
                 char *s = nodeToString(plantree_list);
                 // 写入文件
-                std::ofstream file("/home/zsl/opengauss/tools/TPCH-og/SQL/SQL/sql_out", std::ios::app);  // 以追加模式打开文件
+                // TODO: 通用化些
+                std::ofstream file("/home/zhy/opengauss/tools/TPCH-og/SQL/SQL/sql_out", std::ios::app);  // 以追加模式打开文件
+                // std::ofstream file("/home/zsl/opengauss/tools/TPCH-og/SQL/SQL/sql_out", std::ios::app); 
                 if (file.is_open()) {
                     file << s << std::endl;  // 写入字符串并换行
                 } else {
@@ -7888,7 +7890,9 @@ void LoadSqlPlugin()
  * ----------------------------------------------------------------
  */
 
-#define LOG_FILE "/home/zsl/opengauss/GaussData/postgres_main_log.txt"
+// TODO: 通用化些
+// #define LOG_FILE "/home/zsl/opengauss/GaussData/postgres_main_log.txt"
+#define LOG_FILE "/home/zhy/opengauss/GaussData/postgres_main_log.txt"
 // 记录日志的函数
 void write_log(const std::string &message)
 {
