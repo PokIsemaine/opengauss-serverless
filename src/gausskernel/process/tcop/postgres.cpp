@@ -1108,7 +1108,8 @@ List *pg_analyze_and_rewrite(Node *parsetree, const char *query_string, Oid *par
 #endif
 
     query = parse_analyze(parsetree, query_string, paramTypes, numParams);
-    query->query_string = removeNewlines(query_string);
+    // query->query_string = removeNewlines(query_string);
+    query->query_string = nullptr;
     if (u_sess->attr.attr_common.log_parser_stats)
         ShowUsage("PARSE ANALYSIS STATISTICS");
 
@@ -2788,33 +2789,33 @@ static void exec_simple_query(const char *query_string, MessageType messageType,
 
         plantree_list = pg_plan_queries(querytree_list, 0, NULL);
 
-        // if (strcmp(commandTag, "SHOW") == 0 || strcmp(commandTag, "SET") == 0) {
-        //     // set/show query_dop 暂时不支持序列化和反序列化
-        //     // 后面再做支持或者直接在 executor 重新设置
-        //     printf("commandTag = %s\n", commandTag);
-        // } else {
-        //     printf("exec_simple_query print plantree_list\n");
-        //     if (plantree_list == nullptr) {
-        //         printf("plantree_list nullptr\n");
-        //     } else {
-        //         print(plantree_list);
-        //         char *s = nodeToString(plantree_list);
-        //         // 写入文件
-        //         std::ofstream file("/home/zhy/opengauss/tools/TPCH-og/SQL/SQL/sql_out", std::ios::app);  // 以追加模式打开文件
-        //         if (file.is_open()) {
-        //             file << s << std::endl;  // 写入字符串并换行
-        //         } else {
-        //             std::cout << "无法打开文件" << std::endl;
-        //         }
-        //         if (s != nullptr) {
-        //             plantree_list = (List *)stringToNode(s);
-        //         } else {
-        //             printf("serializeNode not ok\n");
-        //         }
-        //     }
+        if (strcmp(commandTag, "SHOW") == 0 || strcmp(commandTag, "SET") == 0) {
+            // set/show query_dop 暂时不支持序列化和反序列化
+            // 后面再做支持或者直接在 executor 重新设置
+            printf("commandTag = %s\n", commandTag);
+        } else {
+            printf("exec_simple_query print plantree_list\n");
+            if (plantree_list == nullptr) {
+                printf("plantree_list nullptr\n");
+            } else {
+                print(plantree_list);
+                char *s = nodeToString(plantree_list);
+                // 写入文件
+                std::ofstream file("/home/zsl/opengauss/tools/TPCH-og/SQL/SQL/sql_out", std::ios::app);  // 以追加模式打开文件
+                if (file.is_open()) {
+                    file << s << std::endl;  // 写入字符串并换行
+                } else {
+                    std::cout << "无法打开文件" << std::endl;
+                }
+                if (s != nullptr) {
+                    plantree_list = (List *)stringToNode(s);
+                } else {
+                    printf("serializeNode not ok\n");
+                }
+            }
 
-        //     printf("exec_simple_query print plantree_list ok\n");
-        // }
+            printf("exec_simple_query print plantree_list ok\n");
+        }
 
         // system("gs_cgroup -u -S class1 -g 30 --fixed");
 
@@ -7887,7 +7888,7 @@ void LoadSqlPlugin()
  * ----------------------------------------------------------------
  */
 
-#define LOG_FILE "/home/zhy/opengauss/GaussData/postgres_main_log.txt"
+#define LOG_FILE "/home/zsl/opengauss/GaussData/postgres_main_log.txt"
 // 记录日志的函数
 void write_log(const std::string &message)
 {

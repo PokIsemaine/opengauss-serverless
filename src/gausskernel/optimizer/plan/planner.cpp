@@ -932,7 +932,8 @@ PlannedStmt* standard_planner(Query* parse, int cursorOptions, ParamListInfo bou
 
     FillPlanBucketmap(result, node_group_info_context);
 
-    result->query_string = parse->query_string;
+    // result->query_string = parse->query_string;
+    result->query_string = nullptr;
     result->MaxBloomFilterNum = root->glob->bloomfilter.bloomfilter_index + 1;
     if (instr_stmt_plan_need_report_cause_type())
         result->cause_type = instr_stmt_plan_get_cause_type();

@@ -4584,8 +4584,8 @@ static PlannedStmt* _readPlannedStmt(void)
         READ_INT_FIELD(gather_count);
     }
     READ_INT_FIELD(num_nodes);
-
-    if (t_thrd.proc->workingVersionNum < 92097 || local_node->num_streams > 0) {
+    // fix: https://gitee.com/opengauss/openGauss-server/pulls/4543/files
+    if (IS_PGXC_COORDINATOR && (t_thrd.proc->workingVersionNum < 92097 || local_node->num_streams > 0)) {
 	    local_node->nodesDefinition = (NodeDefinition*)palloc0(sizeof(NodeDefinition) * local_node->num_nodes);
 	    for (int i = 0; i < local_node->num_nodes; i++) {
 	        READ_OID_FIELD(nodesDefinition[i].nodeoid);

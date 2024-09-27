@@ -577,7 +577,7 @@ static void _outPlannedStmt(StringInfo str, PlannedStmt* node)
     WRITE_INT_FIELD(max_push_sql_num);
     WRITE_INT_FIELD(gather_count);
     WRITE_INT_FIELD(num_nodes);
-
+    // fix: https://gitee.com/opengauss/openGauss-server/pulls/4543/files
     if(IS_PGXC_COORDINATOR && (t_thrd.proc->workingVersionNum < 92097 || node->num_streams > 0)) {
 	    for (int i = 0; i < node->num_nodes; i++) {
 	        /* Write the field name only one time and just append the value of each field */
@@ -1749,6 +1749,13 @@ static void _outAgg(StringInfo str, Agg* node)
     WRITE_GRPOP_FIELD(grpOperators, numCols);
 #ifndef ENABLE_MULTIPLE_NODES
     if (t_thrd.proc->workingVersionNum >= CHARACTER_SET_VERSION_NUM) {
+        // fix:https://gitee.com/opengauss/openGauss-server/pulls/3502/files
+        if (node->grp_collations == NULL && node->numCols > 0) {
+            node->grp_collations = (unsigned int*)palloc(sizeof(unsigned int) * node->numCols);
+            for (int i = 0; i < node->numCols; i++) {
+                node->grp_collations[i] = InvalidOid;
+            }
+        }
         WRITE_GRPOP_FIELD(grp_collations, numCols);
     }
 #endif
