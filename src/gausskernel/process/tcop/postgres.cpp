@@ -476,17 +476,30 @@ static int InteractiveBackend(StringInfo inBuf)
 
 char* removeNewlines(const char* input) {
     // 创建一个新的字符数组，长度为输入字符串长度
-    size_t length = std::strlen(input);
-    char* result = new char[length + 1]; // +1 for null terminator
+    size_t length = strlen(input);
+    char* formatted = new char[length * 2]; // 预分配足够的空间
     size_t j = 0;
+    bool inWhitespace = true;
 
     for (size_t i = 0; i < length; ++i) {
-        if (input[i] != '\n' && input[i] != '\r' && input[i] != '\\') {
-            result[j++] = input[i]; // 复制非换行字符
+        char ch = input[i];
+        if (ch == '\n' || ch == '\t') {
+            // 忽略换行符和制表符
+            continue;
+        } else if (isspace(ch)) {
+            if (inWhitespace) {
+                continue; // 跳过多个空格
+            }
+            inWhitespace = true; // 进入空白状态
+            formatted[j++] = ' '; // 替换为空格
+        } else {
+            inWhitespace = false; // 不是空白字符
+            formatted[j++] = ch; // 直接输出字符
         }
     }
-    result[j] = '\0'; // 添加字符串结束符
-    return result;
+    formatted[j] = '\0'; // 添加字符串结束符
+
+    return formatted; // 返回格式化后的 char*
 }
 
 /*
