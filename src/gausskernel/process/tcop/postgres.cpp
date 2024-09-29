@@ -2789,9 +2789,10 @@ static void exec_simple_query(const char *query_string, MessageType messageType,
 
         plantree_list = pg_plan_queries(querytree_list, 0, NULL);
 
-        if (strcmp(commandTag, "SHOW") == 0 || strcmp(commandTag, "SET") == 0) {
+        if (strcmp(commandTag, "SHOW") == 0 || strcmp(commandTag, "SET") == 0 || strcmp(commandTag, "EXPLAIN") == 0) {
             // set/show query_dop 暂时不支持序列化和反序列化
             // 后面再做支持或者直接在 executor 重新设置
+            // explain 跳过序列化
             printf("commandTag = %s\n", commandTag);
         } else {
             printf("exec_simple_query print plantree_list\n");
